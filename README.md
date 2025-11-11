@@ -10,6 +10,9 @@ A real-time chat application inspired by the [CM Chat App](cfigma.com/design/cX2
 
 ## Tech Stack
 
-- React (frontend)
+- React 
 - WebSocket / Socket.io
-- Tailwind CSS (styling)
+- Tailwind CSS
+- Java / Spring boot
+- PostgreSQL
+- Cloudinary for images
