@@ -3,7 +3,7 @@ import testProfilePicture from "../../../assets/testProfilePicture.jpg";
 export default function ChatItem() {
     return (
         <>
-            <li className="relative flex items-center w-full gap-3 p-4 transition-all duration-200 bg-white shadow-xs cursor-pointer rounded-2xl hover:bg-blue-400/20">
+            <li className="relative flex items-center w-full gap-3 p-4 transition-all duration-200 shadow-xs cursor-pointer bg-white/80 rounded-2xl hover:bg-blue-400/20">
                 <img
                     src={testProfilePicture}
                     alt="profile picture"
