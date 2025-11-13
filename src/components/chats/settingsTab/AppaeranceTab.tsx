@@ -20,20 +20,32 @@ export default function AppearanceTab({ setActiveSection }: any) {
     }
     return (
         <>
-            <div>
-                <div className="pb-8">
-                    <div className="relative cursor-pointer" onClick={() => setActiveSection("options")}>
-                        <ChevronLeft className="absolute right-0" />
+            <div className="p-5 transition-colors border border-gray-200 shadow-md bg-gray-50 dark:bg-gray-900 dark:border-gray-800 rounded-2xl">
+                <div className="relative flex items-center justify-center pb-8">
+                    <div
+                        className="absolute left-0 flex items-center justify-center p-1 transition-colors rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800"
+                        onClick={() => setActiveSection("options")}>
+                        <ChevronLeft className="text-gray-600 dark:text-gray-300" />
                     </div>
-                    <div className="flex items-center gap-4">
-                        <Palette />
-                        <span className="font-semibold">Appearance</span>
+                    <div className="flex items-center gap-2">
+                        <Palette className="text-blue-500" size={24} />
+                        <span className="font-semibold text-gray-800 dark:text-gray-100">Appearance</span>
                     </div>
                 </div>
-                <div>
-                    <label>
-                        <input type="checkbox" onChange={handleThemeChange} checked={getTheme() == "dark"} />
-                        Enable dark mode
+
+                <div className="flex justify-center mt-4">
+                    <label className="flex items-center gap-3 cursor-pointer select-none">
+                        <div className="relative">
+                            <input
+                                type="checkbox"
+                                className="sr-only peer"
+                                onChange={handleThemeChange}
+                                checked={getTheme() === "dark"}
+                            />
+                            <div className="transition-colors bg-gray-300 rounded-full w-14 h-7 dark:bg-gray-700 peer-checked:bg-gray-800"></div>
+                            <div className="absolute top-0 left-0 transition-transform bg-white rounded-full shadow-md w-7 h-7 dark:bg-gray-200 peer-checked:translate-x-7"></div>
+                        </div>
+                        <span className="font-medium text-gray-700 dark:text-gray-200">Dark Mode</span>
                     </label>
                 </div>
             </div>
