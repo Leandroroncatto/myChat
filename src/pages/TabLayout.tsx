@@ -25,7 +25,7 @@ export default function TabLayout() {
     });
 
     return (
-        <div className="relative flex flex-col w-full h-screen transition-colors duration-300 border-r border-gray-200 shadow-sm bg-gray-50 dark:bg-slate-900 dark:border-slate-800">
+        <div className="relative flex flex-col w-full h-screen transition-colors duration-300 border-r border-gray-300 shadow-sm bg-gray-50 dark:bg-slate-900 dark:border-slate-800">
             <NavigationBar activateTab={setActiveTab} />
 
             {renderTabs()}

@@ -20,7 +20,7 @@ export default function AppearanceTab({ setActiveSection }: any) {
     }
     return (
         <>
-            <div className="p-5 transition-colors border border-gray-200 shadow-md bg-gray-50 dark:bg-gray-900 dark:border-gray-800 rounded-2xl">
+            <div className="p-5 transition-colors border border-gray-300 shadow-md bg-gray-50 dark:bg-gray-900 dark:border-gray-800 rounded-2xl">
                 <div className="relative flex items-center justify-center pb-8">
                     <div
                         className="absolute left-0 flex items-center justify-center p-1 transition-colors rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800"

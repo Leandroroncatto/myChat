@@ -4,7 +4,7 @@ import ChatItem from "./ChatItem";
 export default function ChatsPanel() {
     return (
         <>
-            <div className="w-full h-screen p-2 py-8 sm:pl-36 lg:max-w-[600px] bg-white overflow-y-scroll border-r border-gray-200 dark:bg-slate-900 dark:border-slate-800 transition-colors duration-300">
+            <div className="w-full h-screen p-2 py-8 sm:pl-36 lg:max-w-[600px] bg-white overflow-y-scroll border-r border-gray-300 dark:bg-slate-900 dark:border-slate-800 transition-colors duration-300">
                 <div className="space-y-4">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-slate-100">Chats</h1>

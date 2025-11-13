@@ -32,7 +32,7 @@ export default function NavigationBar({ activateTab }: any) {
 
     return (
         <>
-            <div className="fixed bottom-0 z-10 w-full p-2 transition-colors duration-300 bg-white border-t border-gray-200 shadow-md sm:p-3 sm:left-0 sm:w-32 sm:h-full sm:border-t-0 sm:border-r dark:bg-slate-900 dark:border-slate-800">
+            <div className="fixed bottom-0 z-10 w-full p-2 transition-colors duration-300 bg-white border-t border-gray-300 shadow-md sm:p-3 sm:left-0 sm:w-32 sm:h-full sm:border-t-0 sm:border-r dark:bg-slate-900 dark:border-slate-800">
                 <div className="flex items-center justify-around gap-2 sm:flex-col sm:gap-8">
                     <div className="hidden sm:block">
                         <div>
