@@ -1,7 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import TabLayout from "./pages/TabLayout";
+import { useEffect } from "react";
+import { getTheme, setTheme } from "./utils/toggleTheme";
 
 function App() {
+    useEffect(() => {
+        const theme = getTheme();
+        if (theme) {
+            setTheme(theme);
+        }
+    }, []);
+
     return (
         <>
             <BrowserRouter basename="/">
