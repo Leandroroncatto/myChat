@@ -1,7 +1,8 @@
 import testProfilePicture from "../../assets/testProfilePicture.jpg";
 import { MessageCircleIcon, PhoneIcon, Settings, UsersIcon } from "lucide-react";
 import { useState } from "react";
-import myChatLogo from "../../assets/myChat_LOGO-removebg-preview.png";
+import myChatLightThemeLogo from "../../assets/myChat_lightTheme_LOGO.png";
+import myChatDarkThemeLogo from "../../assets/myChat_darkTheme_LOGO.png";
 
 type tabTypes = {
     message: boolean;
@@ -34,7 +35,10 @@ export default function NavigationBar({ activateTab }: any) {
             <div className="fixed bottom-0 z-10 w-full p-2 transition-colors duration-300 bg-white border-t border-gray-200 shadow-md sm:p-3 sm:left-0 sm:w-32 sm:h-full sm:border-t-0 sm:border-r dark:bg-slate-900 dark:border-slate-800">
                 <div className="flex items-center justify-around gap-2 sm:flex-col sm:gap-8">
                     <div className="hidden sm:block">
-                        <img src={myChatLogo} alt="myChat logo" />
+                        <div>
+                            <img src={myChatLightThemeLogo} alt="Logo" className="block object-contain dark:hidden" />
+                            <img src={myChatDarkThemeLogo} alt="Logo" className="hidden object-contain dark:block" />
+                        </div>
                     </div>
                     <div
                         onClick={() => handleTabActivation("message")}
