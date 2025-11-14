@@ -18,7 +18,8 @@ function App() {
                     <Route path="/auth/register" element={""}></Route>
                     <Route path="/auth/login" element={""}></Route>
 
-                    <Route path="/" element={<Panel />}></Route>
+                    <Route path="/chat" element={<Panel />}></Route>
+                    <Route path="/chat/:id" element={<Panel />}></Route>
                 </Routes>
             </BrowserRouter>
         </>
