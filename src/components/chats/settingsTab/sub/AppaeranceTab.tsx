@@ -1,5 +1,5 @@
 import { ChevronLeft, Palette } from "lucide-react";
-import { getTheme, setTheme } from "../../../utils/toggleTheme";
+import { getTheme, setTheme } from "../../../../utils/toggleTheme";
 import { useEffect, useState } from "react";
 
 export default function AppearanceTab({ setActiveSection }: any) {

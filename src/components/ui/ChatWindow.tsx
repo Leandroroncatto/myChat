@@ -1,4 +1,4 @@
-import EmptyChat from "./ui/EmptyChat";
+import EmptyChat from "./EmptyChat";
 
 export default function ChatWindow() {
     return (

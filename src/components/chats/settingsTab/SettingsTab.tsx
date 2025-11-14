@@ -1,8 +1,8 @@
 import { useState } from "react";
-import OptionsTab from "./OptionsTab";
-import AppearanceTab from "./AppaeranceTab";
+import OptionsTab from "./sub/OptionsTab";
+import AppearanceTab from "./sub/AppaeranceTab";
 
-export default function SettingsPanel() {
+export default function SettingsTab() {
     const [activeSection, setActiveSection] = useState("options");
 
     return (

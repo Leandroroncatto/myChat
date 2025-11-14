@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import TabLayout from "./pages/TabLayout";
+import Panel from "./pages/main/Panel";
 import { useEffect } from "react";
 import { getTheme, setTheme } from "./utils/toggleTheme";
 
@@ -18,10 +18,7 @@ function App() {
                     <Route path="/auth/register" element={""}></Route>
                     <Route path="/auth/login" element={""}></Route>
 
-                    <Route path="/" element={<TabLayout />}></Route>
-                    <Route path="/chat/:id" element={""}></Route>
-                    <Route path="/settings" element={""}></Route>
-                    <Route path="/profile" element={""}></Route>
+                    <Route path="/" element={<Panel />}></Route>
                 </Routes>
             </BrowserRouter>
         </>

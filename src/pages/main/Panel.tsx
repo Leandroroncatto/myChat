@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import NavigationBar from "../components/ui/NavigationBar";
-import ChatTab from "./tabs/ChatTab";
-import SettingsTab from "./tabs/SettingsTab";
+import NavigationBar from "../../components/ui/NavigationBar";
+import MessageTab from "./TabContent/MessageContent";
+import SettingsTab from "./TabContent/SettingsContent";
 
-export default function TabLayout() {
+export default function Panel() {
     const [activeTab, setActiveTab] = useState("message");
     const activeChat = "dasd";
 
-    const renderTabs = () => {
+    const renderTabsContents = () => {
         switch (activeTab) {
             case "message":
-                return <ChatTab />;
+                return <MessageTab />;
             case "user":
                 return "";
             case "phone":
@@ -28,7 +28,7 @@ export default function TabLayout() {
         <div className="relative flex flex-col w-full h-screen transition-colors duration-300 border-r border-gray-300 shadow-sm bg-gray-50 dark:bg-slate-900 dark:border-slate-800">
             <NavigationBar activateTab={setActiveTab} />
 
-            {renderTabs()}
+            {renderTabsContents()}
         </div>
     );
 }
