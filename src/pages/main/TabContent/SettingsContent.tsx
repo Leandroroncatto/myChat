@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import SettingsTab from "../../../components/chats/settingsTab/SettingsTab";
+import SettingsTab from "../../../components/tabs/settingsTab/SettingsTab";
 import ChatWindow from "../../../components/ui/ChatWindow";
 import { useEffect, useState } from "react";
 

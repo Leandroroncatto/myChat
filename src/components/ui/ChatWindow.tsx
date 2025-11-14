@@ -1,4 +1,4 @@
-import EmptyChat from "./EmptyChat";
+import EmptyChat from "../chat/EmptyChat";
 
 export default function ChatWindow({ activeChat }: any) {
     return (

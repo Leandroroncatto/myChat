@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import MessagePanel from "../../../components/chats/messageTab/MessageTab";
+import MessagePanel from "../../../components/tabs/messageTab/MessageTab";
 import ChatWindow from "../../../components/ui/ChatWindow";
 
 export default function MessageContent() {
