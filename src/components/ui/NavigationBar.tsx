@@ -3,6 +3,7 @@ import { MessageCircleIcon, PhoneIcon, Settings, UsersIcon } from "lucide-react"
 import { useState } from "react";
 import myChatLightThemeLogo from "../../assets/myChat_lightTheme_LOGO.png";
 import myChatDarkThemeLogo from "../../assets/myChat_darkTheme_LOGO.png";
+import { useNavigate } from "react-router";
 
 type tabTypes = {
     message: boolean;
@@ -18,15 +19,28 @@ export default function NavigationBar({ activateTab }: any) {
         phone: false,
         settings: false,
     });
+    const navigate = useNavigate();
     const activeTabStyles = "bg-blue-500 text-white p-3 rounded-xl shadow-md transition-all duration-100";
 
     function handleTabActivation(tab: string) {
+        const isMobile = window.innerWidth < 1024;
+
         setActiveTab({
-            message: tab == "message",
-            user: tab == "user",
-            phone: tab == "phone",
-            settings: tab == "settings",
+            message: tab === "message",
+            user: tab === "user",
+            phone: tab === "phone",
+            settings: tab === "settings",
         });
+
+        if (!isMobile) {
+            activateTab(tab);
+            return;
+        }
+
+        if (tab === "message") {
+            navigate("/chat");
+        }
+
         activateTab(tab);
     }
 
