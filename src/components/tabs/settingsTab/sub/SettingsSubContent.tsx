@@ -1,4 +1,4 @@
-import { ChevronRight, Languages, Palette, User } from "lucide-react";
+import { ChevronRight, Languages, LockKeyhole, Palette, User } from "lucide-react";
 
 export default function SettingsSubContent({ setActiveSection }: any) {
     return (
@@ -20,6 +20,15 @@ export default function SettingsSubContent({ setActiveSection }: any) {
                     </div>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
+                <div
+                    onClick={() => setActiveSection("profile")}
+                    className="relative flex items-center w-full gap-4 p-1 mt-4 cursor-pointer rounded-xl hover:bg-blue-500/10">
+                    <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
+                        <User className="text-blue-500" />
+                    </div>
+                    <span className="font-semibold">Profile</span>
+                    <ChevronRight className="absolute right-0 text-slate-300" size={18} />
+                </div>
                 <div className="relative flex items-center w-full gap-4 p-1 mt-4 cursor-pointer rounded-xl hover:bg-blue-500/10">
                     <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
                         <Languages className="text-blue-500" />
@@ -28,9 +37,11 @@ export default function SettingsSubContent({ setActiveSection }: any) {
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
                 <div className="w-full h-1 my-2 border-t border-gray-300 dark:border-gray-800"></div>
-                <div className="relative flex items-center w-full gap-4 p-1 cursor-pointer rounded-xl hover:bg-blue-500/10">
+                <div
+                    onClick={() => setActiveSection("account")}
+                    className="relative flex items-center w-full gap-4 p-1 cursor-pointer rounded-xl hover:bg-blue-500/10">
                     <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
-                        <User className="text-blue-500" />
+                        <LockKeyhole className="text-blue-500" />
                     </div>
                     <span className="font-semibold">Account</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
