@@ -35,7 +35,7 @@ export default function ProfileTab({ setActiveSection }: any) {
                                 placeholder="Search"
                                 value={"Pessoa legal"}
                             />
-                            <p className="p-2 mt-2 text-sm border border-gray-300 text-slate-300 rounded-xl dark:border-slate-800">
+                            <p className="p-2 mt-2 text-sm text-gray-600 border border-gray-300 dark:text-slate-300 rounded-xl dark:border-slate-800">
                                 This name is visible to your contacts
                             </p>
                         </div>
