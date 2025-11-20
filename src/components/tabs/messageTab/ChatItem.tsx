@@ -5,7 +5,7 @@ export default function ChatItem({ id }: any) {
     return (
         <>
             <Link to={`/chat/${id}`}>
-                <li className="relative flex items-center w-full gap-3 p-4 transition-all duration-200 bg-gray-100 shadow-xs cursor-pointer hover:bg-blue-100/40 rounded-2xl dark:bg-slate-800 dark:hover:bg-blue-800/30">
+                <button className="relative flex items-center w-full gap-3 p-4 transition-all duration-200 bg-gray-100 shadow-xs cursor-pointer active:bg-blue-300/20 dark:active:bg-blue-500/20 hover:bg-blue-100/40 rounded-2xl dark:bg-slate-800 dark:hover:bg-blue-800/30">
                     <img
                         src={testProfilePicture}
                         alt="profile picture"
@@ -23,7 +23,7 @@ export default function ChatItem({ id }: any) {
                             </div>
                         </div>
                     </div>
-                </li>
+                </button>
             </Link>
         </>
     );

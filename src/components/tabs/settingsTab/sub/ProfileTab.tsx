@@ -48,13 +48,10 @@ export default function ProfileTab({ setActiveSection }: any) {
                             name="iabout"
                             id="iabout"
                             className="w-full py-2.5 p-4 text-gray-800 bg-gray-100 border border-gray-300 rounded-md placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none transition-all duration-200 dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
-                            value={"blablablabla"}
-                            >
-                                
-                            </textarea>
+                            value={"blablablabla"}></textarea>
                     </div>
                     <div className="flex justify-end">
-                        <button className="p-8 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md cursor-pointer active:outline-0 hover:text-blue-500 hover:border-blue-500 hover:ring-2 hover:ring-blue-500/30 hover:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500">
+                        <button className="p-8 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 active:bg-blue-500/20 bg-gray-100 border border-gray-300 rounded-md cursor-pointer active:outline-0 hover:text-blue-500 hover:border-blue-500 hover:ring-2 hover:ring-blue-500/30 hover:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500">
                             Save
                         </button>
                     </div>
