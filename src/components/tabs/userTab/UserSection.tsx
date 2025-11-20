@@ -1,4 +1,7 @@
 import { Search, UserPlus } from "lucide-react";
+import { mockMessages } from "../../../data/mockMessages";
+import { mockContacts } from "../../../data/mockContacts";
+import Avatar from "react-avatar";
 
 export default function UserSection() {
     const openModal = () => window.alert("abrir modal de adicionar contatos");
@@ -14,7 +17,7 @@ export default function UserSection() {
                         <input
                             type="text"
                             className="w-full py-2.5 pl-12 pr-4 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-3xl focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
-                            placeholder="Search"
+                            placeholder="Buscar contatos"
                         />
                         <Search className="absolute text-blue-500 top-[13px] left-4 dark:text-blue-400" size={20} />
                     </div>
@@ -27,6 +30,32 @@ export default function UserSection() {
                             </div>
                             Adicionar novo contato
                         </button>
+                    </div>
+                </div>
+                <div className="py-4">
+                    <div className="pb-4 text-lg font-semibold text-gray-900 dark:text-gray-200">
+                        <h1>Meus contatos</h1>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        {mockContacts.map((contact) => (
+                            <div className="flex items-center gap-2">
+                                {contact.pfp ? (
+                                    <img src={contact.pfp} alt="" />
+                                ) : (
+                                    <Avatar
+                                        name={contact.name}
+                                        size="40"
+                                        className="text-xs rounded-full outline-1 outline-gray-500"
+                                    />
+                                )}
+                                <div className="flex flex-col">
+                                    <p className="font-semibold">{contact.name}</p>
+                                    <p className={`${contact.status == "Online" ? "text-green-500" : "text-gray-500"} text-sm`}>
+                                        {contact.status}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
