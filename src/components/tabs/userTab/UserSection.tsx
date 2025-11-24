@@ -1,5 +1,4 @@
 import { Search, UserPlus } from "lucide-react";
-import { mockMessages } from "../../../data/mockMessages";
 import { mockContacts } from "../../../data/mockContacts";
 import Avatar from "react-avatar";
 
@@ -45,12 +44,17 @@ export default function UserSection() {
                                     <Avatar
                                         name={contact.name}
                                         size="40"
-                                        className="text-xs rounded-full outline-1 outline-gray-500"
+                                        className={`text-xs rounded-full outline-1 transition-none ${
+                                            contact.status == "Online" ? "outline-green-500" : "outline-gray-500"
+                                        }`}
                                     />
                                 )}
                                 <div className="flex flex-col">
                                     <p className="font-semibold">{contact.name}</p>
-                                    <p className={`${contact.status == "Online" ? "text-green-500" : "text-gray-500"} text-sm`}>
+                                    <p
+                                        className={`${
+                                            contact.status == "Online" ? "text-green-500" : "text-gray-500"
+                                        } text-sm`}>
                                         {contact.status}
                                     </p>
                                 </div>
