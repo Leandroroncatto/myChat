@@ -35,6 +35,7 @@ export default function ProfileTab({ setActiveSection }: any) {
                                 placeholder="Search"
                                 value={"Pessoa legal"}
                             />
+                            <div className="pt-1 pb-4 text-sm font-semibold text-blue-500">@leandrolegal123</div>
                             <p className="p-2 mt-2 text-sm text-gray-600 border border-gray-300 dark:text-slate-300 rounded-xl dark:border-slate-800">
                                 This name is visible to your contacts
                             </p>
@@ -51,7 +52,7 @@ export default function ProfileTab({ setActiveSection }: any) {
                             value={"blablablabla"}></textarea>
                     </div>
                     <div className="flex justify-end">
-                        <button className="p-8 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 active:bg-blue-500/20 bg-gray-100 border border-gray-300 rounded-md cursor-pointer active:outline-0 hover:text-blue-500 hover:border-blue-500 hover:ring-2 hover:ring-blue-500/30 hover:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500">
+                        <button className="p-8 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md cursor-pointer active:bg-blue-500/20 active:outline-0 hover:text-blue-500 hover:border-blue-500 hover:ring-2 hover:ring-blue-500/30 hover:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500">
                             Save
                         </button>
                     </div>
