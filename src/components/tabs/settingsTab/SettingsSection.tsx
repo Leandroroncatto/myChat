@@ -3,6 +3,7 @@ import SettingsSubTabs from "./SettingsSubTabs.tsx";
 import AppearanceTab from "./sub/AppaeranceTab.tsx";
 import AccountTab from "./sub/AccountTab.tsx";
 import ProfileTab from "./sub/ProfileTab.tsx";
+import PrivacityAndSecurityTab from "./sub/PrivacityAndSecurityTab.tsx";
 
 export default function SettingsSection() {
     const [activeSection, setActiveSection] = useState("options");
@@ -14,6 +15,7 @@ export default function SettingsSection() {
                 {activeSection == "appearance" && <AppearanceTab setActiveSection={setActiveSection} />}
                 {activeSection == "profile" && <ProfileTab setActiveSection={setActiveSection} />}
                 {activeSection == "account" && <AccountTab setActiveSection={setActiveSection} />}
+                {activeSection == "privacityAndSecurity" && <PrivacityAndSecurityTab setActiveSection={setActiveSection} />}
             </div>
         </>
     );

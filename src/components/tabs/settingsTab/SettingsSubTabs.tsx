@@ -48,7 +48,9 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                 </div>
             </div>
             <div className="px-4 py-2 my-4 border border-gray-300 shadow cursor-pointer dark:border-slate-800 rounded-xl dark:shadow-gray-800 hover:bg-blue-500/10">
-                <div className="relative flex items-center justify-center w-full gap-4">
+                <div
+                    onClick={() => setActiveSection("privacityAndSecurity")}
+                    className="relative flex items-center justify-center w-full gap-4">
                     <span className="font-semibold">Privacity and security</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
