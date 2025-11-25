@@ -1,4 +1,4 @@
-import { ChevronLeft, Eye, EyeOff, Key, LockKeyhole, Mail, User } from "lucide-react";
+import { ChevronLeft, Eye, EyeOff, Key, LockKeyhole, LogOut, Mail, User } from "lucide-react";
 import { useState } from "react";
 
 export default function AccountTab({ setActiveSection }: any) {
@@ -31,7 +31,7 @@ export default function AccountTab({ setActiveSection }: any) {
                     </div>
                     <div className="flex flex-col gap-4">
                         <div>
-                            <label htmlFor="username" className="text-gray-800 dark:text-gray-200 text-sm">
+                            <label htmlFor="username" className="text-sm text-gray-800 dark:text-gray-200">
                                 Username (Unique Identifier)
                             </label>
                             <div className="relative">
@@ -47,7 +47,7 @@ export default function AccountTab({ setActiveSection }: any) {
                             </div>
                         </div>
                         <div>
-                            <label htmlFor="email" className="text-gray-800 dark:text-gray-200 text-sm">
+                            <label htmlFor="email" className="text-sm text-gray-800 dark:text-gray-200">
                                 Email Adress
                             </label>
                             <div className="relative">
@@ -78,9 +78,9 @@ export default function AccountTab({ setActiveSection }: any) {
                                 Change password
                             </p>
                         </div>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 pb-4 border-b border-gray-300 dark:border-slate-800">
                             <div>
-                                <label htmlFor="currentPassword" className="text-gray-800 dark:text-gray-200 text-sm">
+                                <label htmlFor="currentPassword" className="text-sm text-gray-800 dark:text-gray-200">
                                     Current password
                                 </label>
                                 <div className="relative">
@@ -88,7 +88,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                         type={passwordsInputsTypes.current}
                                         name="currentPassword"
                                         id="currentPassword"
-                                        className="w-full py-2 px-12 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
+                                        className="w-full px-12 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
                                     />
                                     <LockKeyhole
                                         className="absolute text-gray-500 top-3 left-4 dark:text-gray-400"
@@ -96,7 +96,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                     />
                                     {passwordsInputsTypes.current == "text" ? (
                                         <EyeOff
-                                            className="cursor-pointer dark:text-gray-400 absolute top-3 right-4 hover:dark:text-gray-500"
+                                            className="absolute cursor-pointer dark:text-gray-400 top-3 right-4 hover:dark:text-gray-500"
                                             size={18}
                                             onClick={() =>
                                                 setPasswordsInputsTypes((prev) => ({ ...prev, current: "password" }))
@@ -104,7 +104,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                         />
                                     ) : (
                                         <Eye
-                                            className="cursor-pointer dark:text-gray-400 absolute top-3 right-4 hover:dark:text-gray-500"
+                                            className="absolute cursor-pointer dark:text-gray-400 top-3 right-4 hover:dark:text-gray-500"
                                             size={18}
                                             onClick={() =>
                                                 setPasswordsInputsTypes((prev) => ({ ...prev, current: "text" }))
@@ -114,7 +114,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="newPassword" className="text-gray-800 dark:text-gray-200 text-sm">
+                                <label htmlFor="newPassword" className="text-sm text-gray-800 dark:text-gray-200">
                                     New password
                                 </label>
                                 <div className="relative">
@@ -122,7 +122,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                         type={passwordsInputsTypes.new}
                                         name="newPassword"
                                         id="newPassword"
-                                        className="w-full py-2 px-12 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
+                                        className="w-full px-12 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
                                     />
                                     <LockKeyhole
                                         className="absolute text-gray-500 top-3 left-4 dark:text-gray-400"
@@ -130,7 +130,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                     />
                                     {passwordsInputsTypes.new == "text" ? (
                                         <EyeOff
-                                            className="cursor-pointer dark:text-gray-400 absolute top-3 right-4 hover:dark:text-gray-500"
+                                            className="absolute cursor-pointer dark:text-gray-400 top-3 right-4 hover:dark:text-gray-500"
                                             size={18}
                                             onClick={() =>
                                                 setPasswordsInputsTypes((prev) => ({ ...prev, new: "password" }))
@@ -138,7 +138,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                         />
                                     ) : (
                                         <Eye
-                                            className="cursor-pointer dark:text-gray-400 absolute top-3 right-4 hover:dark:text-gray-500"
+                                            className="absolute cursor-pointer dark:text-gray-400 top-3 right-4 hover:dark:text-gray-500"
                                             size={18}
                                             onClick={() =>
                                                 setPasswordsInputsTypes((prev) => ({ ...prev, new: "text" }))
@@ -148,7 +148,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="confirmNew" className="text-gray-800 dark:text-gray-200 text-sm">
+                                <label htmlFor="confirmNew" className="text-sm text-gray-800 dark:text-gray-200">
                                     Confirm new password
                                 </label>
                                 <div className="relative">
@@ -156,7 +156,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                         type={passwordsInputsTypes.confirmNew}
                                         name="confirmNew"
                                         id="confirmNew"
-                                        className="w-full py-2 px-12 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
+                                        className="w-full px-12 py-2 text-gray-800 placeholder-gray-500 transition-all duration-200 bg-gray-100 border border-gray-300 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-slate-500"
                                         autoComplete="off"
                                     />
                                     <LockKeyhole
@@ -165,7 +165,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                     />
                                     {passwordsInputsTypes.confirmNew == "text" ? (
                                         <EyeOff
-                                            className="cursor-pointer dark:text-gray-400 absolute top-3 right-4 hover:dark:text-gray-500"
+                                            className="absolute cursor-pointer dark:text-gray-400 top-3 right-4 hover:dark:text-gray-500"
                                             size={18}
                                             onClick={() =>
                                                 setPasswordsInputsTypes((prev) => ({ ...prev, confirmNew: "password" }))
@@ -173,7 +173,7 @@ export default function AccountTab({ setActiveSection }: any) {
                                         />
                                     ) : (
                                         <Eye
-                                            className="cursor-pointer dark:text-gray-400 absolute top-3 right-4 hover:dark:text-gray-500"
+                                            className="absolute cursor-pointer dark:text-gray-400 top-3 right-4 hover:dark:text-gray-500"
                                             size={18}
                                             onClick={() =>
                                                 setPasswordsInputsTypes((prev) => ({ ...prev, confirmNew: "text" }))
@@ -189,6 +189,10 @@ export default function AccountTab({ setActiveSection }: any) {
                                 Update password
                             </button>
                         </div>
+                        <button className="flex items-center justify-center w-full gap-2 py-2 font-semibold text-red-500 border border-red-500 rounded-md cursor-pointer hover:bg-red-500 hover:text-white">
+                            <LogOut />
+                            <span>Log Out</span>
+                        </button>
                     </div>
                 </div>
             </div>
