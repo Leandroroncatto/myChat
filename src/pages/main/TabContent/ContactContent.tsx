@@ -3,7 +3,7 @@ import ChatWindow from "../../../components/chat/ChatWindow";
 import { useParams } from "react-router";
 import ContactSection from "../../../components/tabs/contactTab/ContactSection";
 
-export default function UserContent() {
+export default function ContactContent() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
     const { id: activeChat } = useParams();
 
