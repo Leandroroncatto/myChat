@@ -29,7 +29,9 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                     <span className="font-semibold">Profile</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
-                <div className="relative flex items-center w-full gap-4 p-1 mt-4 cursor-pointer rounded-xl hover:bg-blue-500/10">
+                <div
+                    onClick={() => setActiveSection("languages")}
+                    className="relative flex items-center w-full gap-4 p-1 mt-4 cursor-pointer rounded-xl hover:bg-blue-500/10">
                     <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
                         <Languages className="text-blue-500" />
                     </div>
