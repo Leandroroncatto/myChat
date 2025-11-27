@@ -1,0 +1,81 @@
+{
+    "messageSection": {
+        "title": "Chats",
+        "inputPlaceholder": "Search chats",
+        "archivedButton": "Archived",
+        "pinnedTitle": "Pinned Chats",
+        "allChatsTitle": "All Chats"
+    },
+    "contactsSection": {
+        "title": "Contacts",
+        "inputPlaceholder": "Search contacts",
+        "newContactButton": "New Contact",
+        "myContactsTitle": "My Contacts"
+    },
+    "settingsSection": {
+        "mainTab": {
+            "title": "Settings",
+            "appearanceButton": "Appearance",
+            "profileButton": "Profile",
+            "languagesButton": "Language",
+            "accountButton": "Account",
+            "privacyAndSecurityButton": "Privacy and Security"
+        },
+        "appearanceSubTab": {
+            "title": "Appearance",
+            "darkModeButton": "Dark Mode"
+        },
+        "profileSubTab": {
+            "title": "Profile",
+            "nameLabel": "Name",
+            "textBox": "This name is visible to your contacts.",
+            "aboutLabel": "About",
+            "buttonText": "Save"
+        },
+        "languagesSubTab": {
+            "title": "Language"
+        },
+        "accountSubTab": {
+            "title": "Account",
+            "userIdentitySection": {
+                "sectionTitle": "User Identity",
+                "usernameLabel": "Username (Unique Identifier)",
+                "usernameInputPlaceholder": "Username",
+                "emailLabel": "Email Address",
+                "emailInputPlaceholder": "Email",
+                "saveIdentityChangesButton": "Save Identity Changes"
+            },
+            "changePasswordSection": {
+                "sectionTitle": "Change Password",
+                "currentPasswordLabel": "Current Password",
+                "newPasswordLabel": "New Password",
+                "confirmPasswordLabel": "Confirm New Password",
+                "updatePasswordButton": "Update Password"
+            },
+            "logOutButton": "Log Out"
+        },
+        "privacyAndSecuritySubTab": {
+            "title": "Privacy and Security",
+            "twoFactorAuthTitle": "Two-Factor Authentication (2FA)",
+            "statusText": "Status",
+            "buttonText": "Activate 2FA",
+            "noteText": "When activated, a security code will be sent to the registered email address upon every new login attempt.",
+            "importantNoteTitle": "Important Note",
+            "importantNote": "This application is a non-profit study and development project. It was created exclusively for learning and technical skill demonstration purposes.",
+            "securityDisclaimerTitle": "Security Warning",
+            "securityDisclaimerText": "Only password data is securely protected. Other account information and all chat content are not guaranteed to be secure. Conversations may become visible or accessible in unintended ways. Use the service and its conversation features at your own risk, and **do not enter personal or sensitive information**."
+        }
+    },
+    "modals": {
+        "addUserModal": {
+            "title": "New Contact",
+            "description": "Search by username to add friends.",
+            "emptyList": "Use the search bar above to find users."
+        },
+        "twoFactorAuthModal": {
+            "title": "Activate Two-Factor Authentication (2FA)",
+            "description": "Enter the 6-digit code sent to your registered email address.",
+            "button": "Enable Two-Factor Authentication"
+        }
+    }
+}
