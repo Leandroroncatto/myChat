@@ -1,14 +1,16 @@
 import { Search, UserPlus, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import LanguageContext from "../../../context/LanguageContext";
 
 export default function AddUserModal({ setModalOpen }: any) {
     const [show, setShow] = useState(false);
+    const { languageData } = useContext(LanguageContext);
 
     const handleClose = () => {
         setShow(false);
         setTimeout(() => setModalOpen(false), 300);
     };
-    
+
     useEffect(() => {
         setTimeout(() => setShow(true), 10);
     }, []);
@@ -42,12 +44,12 @@ export default function AddUserModal({ setModalOpen }: any) {
                         <div className="flex items-center gap-2">
                             <UserPlus size={28} />
                             <h1 className="text-xl font-semibold text-gray-800 sm:text-2xl dark:text-slate-100">
-                                New contact
+                                {languageData.modals?.addUserModal.title}
                             </h1>
                         </div>
                         <div>
                             <p className="text-sm text-gray-400 dark:text-slate-400">
-                                Search by username to find friends
+                                {languageData.modals?.addUserModal.description}
                             </p>
                         </div>
                     </div>
@@ -62,7 +64,7 @@ export default function AddUserModal({ setModalOpen }: any) {
                         </div>
                         <div className="py-8">
                             <p className="text-center text-gray-800 dark:text-slate-100">
-                                Enter a username to find friends
+                                {languageData.modals?.addUserModal.emptyList}
                             </p>
                         </div>
                     </div>

@@ -1,11 +1,14 @@
 import { ChevronRight, Languages, LockKeyhole, Palette, User } from "lucide-react";
+import { useContext } from "react";
+import LanguageContext from "../../../context/LanguageContext";
 
 export default function SettingsSubTabs({ setActiveSection }: any) {
+    const { languageData } = useContext(LanguageContext);
     return (
         <>
             <div className="mb-8">
                 <div>
-                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-slate-100">Settings</h1>
+                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-slate-100">{languageData.settingsSection?.mainTab.title}</h1>
                 </div>
             </div>
             <div className="px-4 py-2 border border-gray-300 shadow rounded-xl dark:border-slate-800 dark:shadow-gray-800">
@@ -16,7 +19,7 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                         <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
                             <Palette className="text-blue-500" />
                         </div>
-                        <span className="font-semibold">Appearance</span>
+                        <span className="font-semibold">{languageData.settingsSection?.mainTab.appearanceButton}</span>
                     </div>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
@@ -26,7 +29,7 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                     <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
                         <User className="text-blue-500" />
                     </div>
-                    <span className="font-semibold">Profile</span>
+                    <span className="font-semibold">{languageData.settingsSection?.mainTab.profileButton}</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
                 <div
@@ -35,7 +38,7 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                     <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
                         <Languages className="text-blue-500" />
                     </div>
-                    <span className="font-semibold">Languages</span>
+                    <span className="font-semibold">{languageData.settingsSection?.mainTab.languagesButton}</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
                 <div className="w-full h-1 my-2 border-t border-gray-300 dark:border-slate-800"></div>
@@ -45,7 +48,7 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                     <div className="p-2 bg-gray-100 rounded-full dark:bg-slate-800">
                         <LockKeyhole className="text-blue-500" />
                     </div>
-                    <span className="font-semibold">Account</span>
+                    <span className="font-semibold">{languageData.settingsSection?.mainTab.accountButton}</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
             </div>
@@ -53,7 +56,7 @@ export default function SettingsSubTabs({ setActiveSection }: any) {
                 <div
                     onClick={() => setActiveSection("privacityAndSecurity")}
                     className="relative flex items-center justify-center w-full gap-4">
-                    <span className="font-semibold">Privacity and security</span>
+                    <span className="font-semibold">{languageData.settingsSection?.mainTab.privacyAndSecurityButton}</span>
                     <ChevronRight className="absolute right-0 text-slate-300" size={18} />
                 </div>
             </div>

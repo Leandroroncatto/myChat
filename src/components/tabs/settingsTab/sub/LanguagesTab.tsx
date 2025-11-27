@@ -7,7 +7,7 @@ export default function LanguagesTab({ setActiveSection }: any) {
         (localStorage.getItem("lang") as "portugues" | "english") || "english"
     );
 
-    const { setLanguage, changeActiveLanguage } = useContext(LanguageContext);
+    const { languageData, setLanguage, changeActiveLanguage } = useContext(LanguageContext);
 
     useEffect(() => {
         localStorage.setItem("lang", activeLang);
@@ -26,7 +26,7 @@ export default function LanguagesTab({ setActiveSection }: any) {
                     </div>
                     <div className="flex items-center gap-2">
                         <Languages className="text-blue-500" size={24} />
-                        <span className="font-semibold text-gray-800 dark:text-gray-100">Languages</span>
+                        <span className="font-semibold text-gray-800 dark:text-gray-100">{languageData.settingsSection.languagesSubTab?.title}</span>
                     </div>
                 </div>
 

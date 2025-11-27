@@ -1,10 +1,12 @@
 import { X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import LanguageContext from "../../../context/LanguageContext";
 
 export default function TwoFactorAuthModal({ setModalOpen }: any) {
     const [code, setCode] = useState(["", "", "", "", "", ""]);
     const [show, setShow] = useState(false);
     const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
+    const { languageData } = useContext(LanguageContext);
 
     function handleChange(index: number, value: string) {
         const newCode = [...code];
@@ -60,10 +62,10 @@ export default function TwoFactorAuthModal({ setModalOpen }: any) {
                 </div>
                 <div className="pt-4">
                     <h1 className="text-xl font-semibold text-gray-800 sm:text-2xl dark:text-slate-100">
-                        Enable 2 Factor Authentication (2FA)
+                        {languageData.modals?.twoFactorAuthModal.title}
                     </h1>
                     <div className="pt-2 text-sm text-gray-400">
-                        <p>Enter the 6 number code sent to your registered email</p>
+                        {languageData.modals?.twoFactorAuthModal.description}
                     </div>
                     <div className="grid grid-cols-6 pt-2">
                         <input
@@ -151,8 +153,8 @@ export default function TwoFactorAuthModal({ setModalOpen }: any) {
                        focus:border-blue-500 focus:outline-none 
                        focus:ring-0"></input>
                     </div>
-                    <button className="w-full mt-4 py-2 bg-blue-500 rounded-md cursor-pointer hover:bg-blue-600 font-semibold">
-                        Verify
+                    <button className="w-full py-2 mt-4 font-semibold bg-blue-500 rounded-md cursor-pointer hover:bg-blue-600">
+                        {languageData.modals?.twoFactorAuthModal.button}
                     </button>
                 </div>
             </div>
