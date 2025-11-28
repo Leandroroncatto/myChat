@@ -1,4 +1,10 @@
 {
+    "chatsSection": {
+        "emptyChat": {
+            "title": "Select a conversation or start a new one",
+            "buttonText": "here"
+        }
+    },
     "messageSection": {
         "title": "Chats",
         "inputPlaceholder": "Search chats",
@@ -75,7 +81,7 @@
         "twoFactorAuthModal": {
             "title": "Activate Two-Factor Authentication (2FA)",
             "description": "Enter the 6-digit code sent to your registered email address.",
-            "button": "Enable Two-Factor Authentication"
+            "buttonText": "Enable Two-Factor Authentication"
         }
     }
 }
