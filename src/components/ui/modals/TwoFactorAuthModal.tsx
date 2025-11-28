@@ -154,7 +154,7 @@ export default function TwoFactorAuthModal({ setModalOpen }: any) {
                        focus:ring-0"></input>
                     </div>
                     <button className="w-full py-2 mt-4 font-semibold bg-blue-500 rounded-md cursor-pointer hover:bg-blue-600 text-white">
-                        {languageData.modals?.twoFactorAuthModal.button}
+                        {languageData.modals?.twoFactorAuthModal.buttonText}
                     </button>
                 </div>
             </div>
