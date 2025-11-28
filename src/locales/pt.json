@@ -1,12 +1,12 @@
 {
     "chatsSection": {
         "emptyChat": {
-            "title": "Selecione uma conversa ou comece uma",
-            "buttonText": "aqui"
+            "title": "Selecione uma conversa para começar",
+            "buttonText": "Pesquisar contatos"
         }
     },
     "messageSection": {
-        "title": "Conversas",
+        "title": "Mensagens",
         "inputPlaceholder": "Pesquisar conversas",
         "archivedButton": "Arquivadas",
         "pinnedTitle": "Conversas Fixadas",
@@ -17,6 +17,10 @@
         "inputPlaceholder": "Buscar contatos",
         "newContactButton": "Novo Contato",
         "myContactsTitle": "Meus Contatos"
+    },
+    "phoneSection": {
+        "warningTitle": "Em Desenvolvimento",
+        "warningMessage": "Esta funcionalidade está sendo desenvolvida no momento. Volte em breve para conferir as novidades!"
     },
     "settingsSection": {
         "mainTab": {
@@ -34,7 +38,7 @@
         "profileSubTab": {
             "title": "Perfil",
             "nameLabel": "Nome",
-            "textBox": "Este nome é visível para seus contatos.",
+            "textBox": "Seu nome será exibido para seus contatos.",
             "aboutLabel": "Sobre",
             "buttonText": "Salvar"
         },
@@ -45,7 +49,7 @@
             "title": "Conta",
             "userIdentitySection": {
                 "sectionTitle": "Identidade do Usuário",
-                "usernameLabel": "Nome de Usuário (Identificador Único)",
+                "usernameLabel": "Nome de Usuário (ID Único)",
                 "usernameInputPlaceholder": "Nome de Usuário",
                 "emailLabel": "Endereço de E-mail",
                 "emailInputPlaceholder": "E-mail",
@@ -64,8 +68,8 @@
             "title": "Privacidade e Segurança",
             "twoFactorAuthTitle": "Autenticação de Dois Fatores (2FA)",
             "statusText": "Status",
-            "buttonText": "Ativar 2FA",
-            "noteText": "Quando ativada, um código de segurança será enviado para o e-mail registrado a cada nova tentativa de login.",
+            "buttonText": "Gerenciar 2FA",
+            "noteText": "Com a 2FA ativa, um código de segurança será enviado ao seu e-mail a cada novo login.",
             "importantNoteTitle": "Observação Importante",
             "importantNote": "Este aplicativo é um projeto de estudo e desenvolvimento sem fins lucrativos. Ele foi criado exclusivamente para fins de aprendizado e demonstração de habilidades técnicas.",
             "securityDisclaimerTitle": "Aviso de Segurança",
@@ -75,7 +79,7 @@
     "modals": {
         "addUserModal": {
             "title": "Novo Contato",
-            "description": "Pesquise por nome de usuário para adicionar amigos.",
+            "description": "Pesquise pelo nome de usuário para adicionar um novo contato.",
             "emptyList": "Use a busca acima para encontrar usuários."
         },
         "twoFactorAuthModal": {

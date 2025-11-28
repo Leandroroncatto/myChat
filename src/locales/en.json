@@ -1,13 +1,13 @@
 {
     "chatsSection": {
         "emptyChat": {
-            "title": "Select a conversation or start a new one",
-            "buttonText": "here"
+            "title": "Select a conversation to start",
+            "buttonText": "Search contacts"
         }
     },
     "messageSection": {
-        "title": "Chats",
-        "inputPlaceholder": "Search chats",
+        "title": "Messages",
+        "inputPlaceholder": "Search conversations",
         "archivedButton": "Archived",
         "pinnedTitle": "Pinned Chats",
         "allChatsTitle": "All Chats"
@@ -18,6 +18,10 @@
         "newContactButton": "New Contact",
         "myContactsTitle": "My Contacts"
     },
+    "phoneSection": {
+        "warningTitle": "Under Development",
+        "warningMessage": "This feature is currently being developed. Check back soon for updates!"
+    },
     "settingsSection": {
         "mainTab": {
             "title": "Settings",
@@ -25,7 +29,7 @@
             "profileButton": "Profile",
             "languagesButton": "Language",
             "accountButton": "Account",
-            "privacyAndSecurityButton": "Privacy and Security"
+            "privacyAndSecurityButton": "Privacy & Security"
         },
         "appearanceSubTab": {
             "title": "Appearance",
@@ -34,7 +38,7 @@
         "profileSubTab": {
             "title": "Profile",
             "nameLabel": "Name",
-            "textBox": "This name is visible to your contacts.",
+            "textBox": "Your name will be visible to your contacts.",
             "aboutLabel": "About",
             "buttonText": "Save"
         },
@@ -45,7 +49,7 @@
             "title": "Account",
             "userIdentitySection": {
                 "sectionTitle": "User Identity",
-                "usernameLabel": "Username (Unique Identifier)",
+                "usernameLabel": "Username (Unique ID)",
                 "usernameInputPlaceholder": "Username",
                 "emailLabel": "Email Address",
                 "emailInputPlaceholder": "Email",
@@ -61,27 +65,27 @@
             "logOutButton": "Log Out"
         },
         "privacyAndSecuritySubTab": {
-            "title": "Privacy and Security",
+            "title": "Privacy & Security",
             "twoFactorAuthTitle": "Two-Factor Authentication (2FA)",
             "statusText": "Status",
-            "buttonText": "Activate 2FA",
-            "noteText": "When activated, a security code will be sent to the registered email address upon every new login attempt.",
+            "buttonText": "Manage 2FA",
+            "noteText": "With 2FA active, a security code will be sent to your email with every new login.",
             "importantNoteTitle": "Important Note",
-            "importantNote": "This application is a non-profit study and development project. It was created exclusively for learning and technical skill demonstration purposes.",
-            "securityDisclaimerTitle": "Security Warning",
-            "securityDisclaimerText": "Only password data is securely protected. Other account information and all chat content are not guaranteed to be secure. Conversations may become visible or accessible in unintended ways. Use the service and its conversation features at your own risk, and **do not enter personal or sensitive information**."
+            "importantNote": "This application is a non-profit study and development project. It was created exclusively for the purpose of learning and demonstrating technical skills.",
+            "securityDisclaimerTitle": "Security Disclaimer",
+            "securityDisclaimerText": "Only password data is securely protected. Other account information and all conversation content are not guaranteed to be secure. Chats may become unintentionally visible or accessible. Use the service and its chat features at your own risk, and **do not enter any personal or sensitive information**."
         }
     },
     "modals": {
         "addUserModal": {
             "title": "New Contact",
-            "description": "Search by username to add friends.",
+            "description": "Search by username to add a new contact.",
             "emptyList": "Use the search bar above to find users."
         },
         "twoFactorAuthModal": {
             "title": "Activate Two-Factor Authentication (2FA)",
             "description": "Enter the 6-digit code sent to your registered email address.",
-            "buttonText": "Enable Two-Factor Authentication"
+            "buttonText": "Activate Two-Factor Authentication"
         }
     }
 }
