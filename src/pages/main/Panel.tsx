@@ -3,6 +3,7 @@ import NavigationBar from "../../components/ui/NavigationBar";
 import MessageContent from "./TabContent/MessageContent";
 import SettingsContent from "./TabContent/SettingsContent";
 import ContactContent from "./TabContent/ContactContent";
+import PhoneContent from "./TabContent/PhoneContent";
 
 export default function Panel() {
     const [activeTab, setActiveTab] = useState("message");
@@ -14,7 +15,7 @@ export default function Panel() {
             case "contact":
                 return <ContactContent />;
             case "phone":
-                return "";
+                return <PhoneContent />;
             case "settings":
                 return <SettingsContent />;
         }
