@@ -1,5 +1,6 @@
 {
     "chatsSection": {
+        "startOfConversation": "This is the start of your conversation",
         "emptyChat": {
             "title": "Select a conversation to start",
             "buttonText": "Search contacts"
