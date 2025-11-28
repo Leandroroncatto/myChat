@@ -11,10 +11,10 @@ export default function PhoneSection() {
                 <div className="flex flex-col gap-4 items-center justify-center w-full h-full">
                     <AlertTriangle className="text-blue-500" size={72} />
                     <h1 className="text-2xl font-bold text-gray-800 dark:text-slate-200">
-                        {languageData.phoneSection.warningTitle}
+                        {languageData.phoneSection?.warningTitle}
                     </h1>
                     <p className="text-sm text-center max-w-[300px] text-gray-700 dark:text-slate-300">
-                        {languageData.phoneSection.warningMessage}
+                        {languageData.phoneSection?.warningMessage}
                     </p>
                 </div>
             </div>
