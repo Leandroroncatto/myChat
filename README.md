@@ -8,10 +8,15 @@ A real-time chat application inspired by the [CM Chat App](figma.com/design/cX28
 - Real-time messaging
 - Responsive design
 - Authentication
+- 2FA
+- Dark Mode / Light mode
+- Multi language support
+- Profile customization
+- calls ( MAYBE ) 
 
 ## Tech Stack
 
-- React 
+- React / TypeScript
 - WebSocket / Socket.io
 - Tailwind CSS
 - Java / Spring boot
