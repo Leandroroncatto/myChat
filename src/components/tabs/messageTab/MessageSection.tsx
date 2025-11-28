@@ -24,12 +24,12 @@ export default function MessageSection() {
                         <Search className="absolute text-blue-500 top-[13px] left-4 dark:text-blue-400" size={20} />
                     </div>
                     <div className="pt-10 pb-3 border-b border-gray-300 dark:border-gray-800">
-                        <div className="flex items-center justify-start gap-4 dark:text-blue-500">
+                        <button className="flex items-center justify-start gap-4 dark:text-blue-500 cursor-pointer hover:text-blue-600">
                             <Box size={20} />
-                            <h2 className="text-sm font-semibold text-blue-500 dark:text-slate-100">
+                            <h2 className="text-sm font-semibold text-blue-500 dark:text-slate-100 dark:hover:text-slate-200">
                                 {languageData.messageSection?.archivedButton}
                             </h2>
-                        </div>
+                        </button>
                     </div>
                     <div className="py-8">
                         <h2 className="pb-4 text-base font-semibold text-gray-700 dark:text-slate-300">
