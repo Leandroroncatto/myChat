@@ -3,15 +3,15 @@ import { Shield } from "lucide-react";
 export default function SecuritySection() {
     return (
         <>
-            <section className="bg-white">
+            <section className="bg-white dark:bg-slate-800">
                 <div className="container p-4 py-24 mx-auto">
                     <div className="flex justify-between gap-8">
                         <div className="w-full md:w-1/2">
-                            <h1 className="pb-4 text-3xl font-bold text-center text-red-800 md:text-start">
+                            <h1 className="pb-4 text-3xl font-bold text-center text-red-800 dark:text-red-500 md:text-start">
                                 Security disclaimer
                             </h1>
-                            <ul className="ml-4 space-y-3 text-gray-700 list-disc list-inside">
-                                <li className="font-semibold text-red-700">
+                            <ul className="ml-4 space-y-3 text-gray-700 list-disc list-inside dark:text-slate-100">
+                                <li className="font-semibold text-red-700 dark:text-red-400">
                                     Apenas a sua senha está protegida de forma segura.
                                 </li>
                                 <li>
@@ -24,7 +24,7 @@ export default function SecuritySection() {
                                 </li>
                                 <li>As conversas podem se tornar acessíveis ou visíveis acidentalmente a terceiros.</li>
                             </ul>
-                            <p className="px-3 pt-2 text-red-500">
+                            <p className="px-3 pt-2 text-red-500 dark:text-red-600">
                                 Aviso Crítico: Não insira nenhuma informação pessoal ou sensível nas funcionalidades de
                                 chat. Use o serviço por sua conta e risco.
                             </p>

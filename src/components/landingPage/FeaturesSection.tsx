@@ -4,9 +4,11 @@ import FeatureItem from "./FeatureItem";
 export default function FeaturesSection() {
     return (
         <>
-            <section className="bg-slate-50">
+            <section className="bg-slate-50 dark:bg-slate-900">
                 <div className="container w-full px-4 mx-auto py-18">
-                    <h1 className="text-4xl font-bold text-center text-gray-900">Por que escolher o myChat?</h1>
+                    <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-slate-100">
+                        Por que escolher o myChat?
+                    </h1>
                     <div className="flex flex-col w-full grid-cols-3 gap-8 pt-12 lg:grid">
                         <FeatureItem
                             icon={<Zap className="text-blue-500" />}

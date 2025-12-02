@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <>
-            <footer className="bg-slate-900">
+            <footer className="bg-slate-900 dark:bg-slate-950">
                 <div className="container p-4 py-12 mx-auto">
                     <div className="flex items-center justify-between">
                         <p className="text-xl font-extrabold text-gray-200">myChat</p>
