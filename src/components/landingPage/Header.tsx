@@ -1,10 +1,11 @@
 import { Link } from "react-router";
-// import myChatLogo from "../../assets/myChat_lightTheme_LOGO.png";
+// import myChatLogo from "../../assets/myChat_lightTheme_LOGO.png"
 import { Check, LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
+import type { HeaderProps } from "../../types/landingPage/HeaderProps";
 
-export default function Header({ setCurrentTheme, currentTheme }: any) {
+export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: HeaderProps) {
     const [languageSelectorOpen, setLanguageSelectorOpen] = useState(false);
     const [activeLang, setActiveLang] = useState<"portugues" | "english">(
         (localStorage.getItem("lang") as "portugues" | "english") || "english"
@@ -42,17 +43,23 @@ export default function Header({ setCurrentTheme, currentTheme }: any) {
             <div className="fixed top-0 w-full bg-white border-b border-gray-300 dark:text-slate-100 dark:bg-slate-900 dark:border-slate-700">
                 <div className="container flex justify-between p-4 mx-auto">
                     <div className="flex items-center gap-2">
-                        <h1 className="text-xl font-semibold text-gray-800 dark:text-slate-100">
+                        <h1
+                            onClick={() => setScrollDiv("mychat")}
+                            className="cursor-pointer text-xl font-semibold text-gray-800 dark:text-slate-100">
                             {" "}
                             {languageData.landingPage?.header.title}
                         </h1>
                     </div>
                     <div className="flex items-center gap-6">
                         <div className="items-center hidden gap-4 sm:flex">
-                            <button className="text-gray-600 cursor-pointer dark:text-slate-100 dark:text hover:text-blue-500 ">
+                            <button
+                                onClick={() => setScrollDiv("resources")}
+                                className="text-gray-600 cursor-pointer dark:text-slate-100 dark:text hover:text-blue-500 ">
                                 {languageData.landingPage?.header.navButtons.resourcesButton}
                             </button>
-                            <button className="text-gray-600 cursor-pointer dark:text-slate-100 hover:text-blue-500 ">
+                            <button
+                                onClick={() => setScrollDiv("security")}
+                                className="text-gray-600 cursor-pointer dark:text-slate-100 hover:text-blue-500 ">
                                 {languageData.landingPage?.header.navButtons.securityButton}
                             </button>
                         </div>
