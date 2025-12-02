@@ -1,12 +1,13 @@
 import { Shield } from "lucide-react";
 import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
+import type { RefSectionProps } from "../../types/landingPage/SectionsProps";
 
-export default function SecuritySection() {
+export default function SecuritySection({ ref }: RefSectionProps) {
     const { languageData } = useContext(LanguageContext);
     return (
         <>
-            <section className="bg-white dark:bg-slate-800">
+            <section ref={ref} className="bg-white dark:bg-slate-800">
                 <div className="container p-4 py-24 mx-auto">
                     <div className="flex justify-between gap-8">
                         <div className="w-full md:w-1/2">
