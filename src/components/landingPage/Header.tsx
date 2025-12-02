@@ -4,12 +4,11 @@ import { Check, LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import type { HeaderProps } from "../../types/landingPage/HeaderProps";
+import type { LangMode } from "../../types/globals/LangMode";
 
 export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: HeaderProps) {
-    const [languageSelectorOpen, setLanguageSelectorOpen] = useState(false);
-    const [activeLang, setActiveLang] = useState<"portugues" | "english">(
-        (localStorage.getItem("lang") as "portugues" | "english") || "english"
-    );
+    const [languageSelectorOpen, setLanguageSelectorOpen] = useState<boolean>(false);
+    const [activeLang, setActiveLang] = useState<LangMode>((localStorage.getItem("lang") as LangMode) || "english");
     const { languageData, setLanguage } = useContext(LanguageContext);
     const languageSelectorRef = useRef<HTMLDivElement | null>(null);
     const languageIconRef = useRef<SVGSVGElement | null>(null);

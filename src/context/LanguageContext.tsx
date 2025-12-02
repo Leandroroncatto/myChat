@@ -1,13 +1,9 @@
 import { createContext } from "react";
 import en from "../locales/en.json";
+import type { LanguageContextType } from "../types/contexts/LanguageContextType";
 
-type languageContextTypes = {
-    language: "portugues" | "english";
-    setLanguage: React.Dispatch<React.SetStateAction<"portugues" | "english">>;
-    languageData: typeof en;
-};
 
-const LanguageContext = createContext<languageContextTypes>({
+const LanguageContext = createContext<LanguageContextType>({
     language: "english",
     setLanguage: () => {},
     languageData: en,

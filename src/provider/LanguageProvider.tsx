@@ -2,17 +2,19 @@ import { useEffect, useState } from "react";
 import LanguageContext from "../context/LanguageContext";
 import pt from "../locales/pt.json";
 import en from "../locales/en.json";
+import type { LangMode } from "../types/globals/LangMode";
+import type { LanguageProviderTypes } from "../types/providers/LanguageProviderTypes";
 
-export default function LanguageProvider({ children }: any) {
-    const [language, setLanguage] = useState<"portugues" | "english">("english");
-    const [languageData, setLanguageData] = useState(en);
+export default function LanguageProvider({ children }: LanguageProviderTypes) {
+    const [language, setLanguage] = useState<LangMode>("english");
+    const [languageData, setLanguageData] = useState<typeof en>(en);
 
     function getLanguageData(lang: string) {
         if (lang == "portugues") return pt;
         if (lang == "english") return en;
         return en;
     }
-    
+
     useEffect(() => {
         setLanguageData(getLanguageData(language));
     }, [language]);
