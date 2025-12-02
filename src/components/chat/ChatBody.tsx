@@ -7,7 +7,7 @@ import LanguageContext from "../../context/LanguageContext";
 export default function ChatBody() {
     const { languageData } = useContext(LanguageContext);
     return (
-        <div className="flex flex-col max-h-full pl-4 pr-0 py-4 overflow-y-scroll h-full">
+        <div className="flex flex-col h-full max-h-full py-4 pl-4 pr-0 overflow-y-scroll">
             <div className="flex flex-col flex-1 gap-4 pb-4 pr-2 overflow-y-auto">
                 <div className="flex items-center justify-center p-8 my-8 text-center border border-gray-300 rounded-xl dark:border-gray-800">
                     <p>{languageData.chatsSection?.startOfConversation}</p>
