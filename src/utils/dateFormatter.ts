@@ -1,4 +1,4 @@
-export default function dateFormatter(unformatted: string) {
+export default function dateFormatter(unformatted: string): string {
     const date = new Date(unformatted);
     const today = new Date();
 
