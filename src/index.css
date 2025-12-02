@@ -23,6 +23,12 @@ body,html{
     background-color: black;
 }
 
+.transition-transform-shadow {
+    transition-property: transform, translate, scale, rotate, box-shadow;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function) /* cubic-bezier(0.4, 0, 0.2, 1) */);
+    transition-duration: var(--tw-duration, var(--default-transition-duration) /* 150ms */);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
