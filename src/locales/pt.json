@@ -1,5 +1,47 @@
 {
-    "landingPage": {},
+    "landingPage": {
+        "header": {
+            "title": "myChat",
+            "navButtons": {
+                "resourcesButton": "Recursos",
+                "securityButton": "Segurança",
+                "startButton": "Começar"
+            }
+        },
+        "heroSection": {
+            "headline": "Conecte-se com quem se importa",
+            "subtitle": "Uma plataforma de mensagens moderna para manter suas conversas organizadas.",
+            "buttonText": "Começar Agora"
+        },
+        "featuresSection": {
+            "title": "Por que escolher o myChat?",
+            "feature1": {
+                "title": "Rápido e Eficiente",
+                "text": "Mensagens instantâneas com sincronização em tempo real em todos os seus dispositivos"
+            },
+            "feature2": {
+                "title": "Autenticação 2FA",
+                "text": "Proteja sua conta com autenticação de dois fatores para maior segurança"
+            },
+            "feature3": {
+                "title": "Organizado",
+                "text": "Fixe conversas importantes e mantenha tudo organizado em um só lugar"
+            }
+        },
+        "securitySection": {
+            "title": "Aviso de Segurança",
+            "points": {
+                "point1": "Apenas a sua senha está protegida de forma segura.",
+                "point2": "Outras informações da conta (como nome, e-mail) não têm garantia de segurança.",
+                "point3": "Conteúdo de Conversas/Chats: O sigilo de todo o conteúdo da conversa não é garantido.",
+                "point4": "As conversas podem se tornar acessíveis ou visíveis acidentalmente a terceiros."
+            },
+            "criticalWarning": "Aviso Crítico: Não insira nenhuma informação pessoal ou sensível nas funcionalidades de chat. Use o serviço por sua conta e risco."
+        },
+        "footer": {
+            "copyright": "Todos direitos reservados."
+        }
+    },
     "auth": {},
     "mainApp": {
         "chatsSection": {

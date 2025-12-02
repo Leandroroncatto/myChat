@@ -1,6 +1,9 @@
 import { Shield } from "lucide-react";
+import { useContext } from "react";
+import LanguageContext from "../../context/LanguageContext";
 
 export default function SecuritySection() {
+    const { languageData } = useContext(LanguageContext);
     return (
         <>
             <section className="bg-white dark:bg-slate-800">
@@ -8,25 +11,18 @@ export default function SecuritySection() {
                     <div className="flex justify-between gap-8">
                         <div className="w-full md:w-1/2">
                             <h1 className="pb-4 text-3xl font-bold text-center text-red-800 dark:text-red-500 md:text-start">
-                                Security disclaimer
+                                {languageData.landingPage?.securitySection.title}
                             </h1>
                             <ul className="ml-4 space-y-3 text-gray-700 list-disc list-inside dark:text-slate-100">
                                 <li className="font-semibold text-red-700 dark:text-red-400">
-                                    Apenas a sua senha está protegida de forma segura.
+                                    {languageData.landingPage?.securitySection.points.point1}
                                 </li>
-                                <li>
-                                    <span className="font-semibold">Outras informações da conta</span> (como nome,
-                                    e-mail) não têm garantia de segurança.
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Conteúdo de Conversas/Chats:</span> O sigilo de todo
-                                    o conteúdo da conversa não é garantido.
-                                </li>
-                                <li>As conversas podem se tornar acessíveis ou visíveis acidentalmente a terceiros.</li>
+                                <li>{languageData.landingPage?.securitySection.points.point2}</li>
+                                <li>{languageData.landingPage?.securitySection.points.point3}</li>
+                                <li> {languageData.landingPage?.securitySection.points.point4}.</li>
                             </ul>
                             <p className="px-3 pt-2 text-red-500 dark:text-red-600">
-                                Aviso Crítico: Não insira nenhuma informação pessoal ou sensível nas funcionalidades de
-                                chat. Use o serviço por sua conta e risco.
+                                {languageData.landingPage?.securitySection.criticalWarning}
                             </p>
                         </div>
                         <div className="items-center justify-center hidden w-1/2 p-4 md:flex bg-red-500/10 rounded-2xl">

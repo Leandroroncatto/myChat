@@ -1,23 +1,26 @@
 import { Link } from "react-router";
 import myChatLightThemeInterfaceTest from "../../assets/myChatLightInterface.png";
 import myChatDarkThemeInterfaceTest from "../../assets/myChatDarkInterface.png";
+import { useContext } from "react";
+import LanguageContext from "../../context/LanguageContext";
 
 export default function HeroSection({ currentTheme }: any) {
+    const { languageData } = useContext(LanguageContext);
     return (
         <>
             <section className="bg-white dark:bg-slate-800 ">
                 <div className="container p-4 pb-24 mx-auto pt-42">
                     <div className="flex flex-col items-center justify-center gap-8 pb-12">
                         <h1 className="text-4xl font-extrabold leading-tight text-center text-gray-800 md:text-6xl dark:text-slate-100">
-                            Conecte-se com quem se importa
+                            {languageData.landingPage?.heroSection.headline}
                         </h1>
                         <p className="text-xl text-gray-500 max-w-[700px] text-center dark:text-slate-200">
-                            Uma plataforma de mensagens moderna para manter suas conversas organizadas.
+                            {languageData.landingPage?.heroSection.subtitle}
                         </p>
                         <Link
                             to={"/login"}
                             className="px-6 py-4 font-bold text-white transition duration-100 ease-in bg-blue-500 rounded-md cursor-pointer hover:scale-102 hover:shadow-lg hover:bg-blue-600">
-                            Começar Agora
+                            {languageData.landingPage?.heroSection.buttonText}
                         </Link>
                     </div>
                     <div className="flex items-center justify-between gap-4 p-2">
