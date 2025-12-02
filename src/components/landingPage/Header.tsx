@@ -1,23 +1,41 @@
 import { Link } from "react-router";
 // import myChatLogo from "../../assets/myChat_lightTheme_LOGO.png";
 import { Check, LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
 
 export default function Header({ setCurrentTheme, currentTheme }: any) {
     const [languageSelectorOpen, setLanguageSelectorOpen] = useState(false);
-    const { languageData, setLanguage, changeActiveLanguage } = useContext(LanguageContext);
     const [activeLang, setActiveLang] = useState<"portugues" | "english">(
         (localStorage.getItem("lang") as "portugues" | "english") || "english"
     );
+    const { languageData, setLanguage } = useContext(LanguageContext);
+    const languageSelectorRef = useRef<HTMLDivElement | null>(null);
+    const languageIconRef = useRef<SVGSVGElement | null>(null);
 
-    console.log(languageData);
+    function handleLanguageChange(lang: "portugues" | "english") {
+        setActiveLang(lang);
+        setLanguageSelectorOpen(false);
+    }
 
     useEffect(() => {
         localStorage.setItem("lang", activeLang);
         setLanguage(activeLang);
-        changeActiveLanguage();
     }, [activeLang]);
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (
+                !languageIconRef.current?.contains(e.target as Node) &&
+                !languageSelectorRef.current?.contains(e.target as Node)
+            )
+                setLanguageSelectorOpen(false);
+        };
+
+        document.addEventListener("click", handleClickOutside);
+
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
 
     return (
         <>
@@ -37,6 +55,7 @@ export default function Header({ setCurrentTheme, currentTheme }: any) {
                         </div>
                         <div className="relative">
                             <LanguagesIcon
+                                ref={languageIconRef}
                                 onClick={() => setLanguageSelectorOpen(!languageSelectorOpen)}
                                 className={`${
                                     languageSelectorOpen ? "text-blue-500" : "text-gray-600 dark:text-slate-100"
@@ -44,15 +63,17 @@ export default function Header({ setCurrentTheme, currentTheme }: any) {
                                 size={21}
                             />
                             {languageSelectorOpen && (
-                                <div className="absolute w-48 transition duration-75 ease-in bg-white border border-gray-200 shadow-xl xl top-8 rounded-xl dark:bg-slate-800 dark:border-slate-700">
-                                    <div onClick={() => setActiveLang("portugues")} className="overflow-hidden">
-                                        <div className="flex items-center justify-between px-4 py-2 cursor-pointer">
+                                <div
+                                    ref={languageSelectorRef}
+                                    className="absolute w-48 transition duration-75 ease-in bg-white border border-gray-200 shadow-xl xl top-8 rounded-xl dark:bg-slate-800 dark:border-slate-700">
+                                    <div onClick={() => handleLanguageChange("portugues")} className="overflow-hidden">
+                                        <div className="flex items-center justify-between px-4 py-2 cursor-pointer dark:hover:bg-slate-900 rounded-t-xl">
                                             <p className="text-sm">Portuguese</p>
                                             {activeLang == "portugues" && <Check className="w-4 h-4 text-blue-500" />}
                                         </div>
                                     </div>
-                                    <div onClick={() => setActiveLang("english")} className="overflow-hidden">
-                                        <div className="flex items-center justify-between px-4 py-2 cursor-pointer rounded-xl">
+                                    <div onClick={() => handleLanguageChange("english")} className="overflow-hidden">
+                                        <div className="flex items-center justify-between px-4 py-2 cursor-pointer dark:hover:bg-slate-900 rounded-b-xl">
                                             <p className="text-sm">English (US)</p>
                                             {activeLang == "english" && <Check className="w-4 h-4 text-blue-500" />}
                                         </div>
