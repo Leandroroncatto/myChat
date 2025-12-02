@@ -3,8 +3,9 @@ import myChatLightThemeInterfaceTest from "../../assets/myChatLightInterface.png
 import myChatDarkThemeInterfaceTest from "../../assets/myChatDarkInterface.png";
 import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
+import type { HeroSectionProps } from "../../types/landingPage/SectionsProps";
 
-export default function HeroSection({ currentTheme }: any) {
+export default function HeroSection({ currentTheme }: HeroSectionProps) {
     const { languageData } = useContext(LanguageContext);
     return (
         <>
