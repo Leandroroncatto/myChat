@@ -5,8 +5,8 @@ import ProfileDropdown from "./ProfileDropdown";
 import SearchBar from "./SearchBar";
 
 export default function ChatHeader() {
-    const [activeDropdown, setActiveDropdown] = useState(false);
-    const [activeSearchBar, setActiveSearchBar] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState<boolean>(false);
+    const [activeSearchBar, setActiveSearchBar] = useState<boolean>(false);
     const triggerRef = useRef<HTMLDivElement>(null);
 
     return (

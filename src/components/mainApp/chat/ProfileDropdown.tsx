@@ -1,14 +1,6 @@
 import { Phone, Video } from "lucide-react";
-import { useEffect, useRef, type Dispatch, type RefObject, type SetStateAction } from "react";
-
-export type profileDropdownTypes = {
-    triggerRef: RefObject<HTMLDivElement | null>;
-    setActiveDropdown: Dispatch<SetStateAction<boolean>>;
-    profilePicture: any;
-    username: string;
-    displayName: string;
-    activeDropdown: boolean;
-};
+import { useEffect, useRef } from "react";
+import type { ProfileDropdownProps } from "../../../types/mainApp/chat/ProfileDropdownProps";
 
 export default function ProfileDropdown({
     triggerRef,
@@ -17,7 +9,7 @@ export default function ProfileDropdown({
     username,
     activeDropdown,
     setActiveDropdown,
-}: profileDropdownTypes) {
+}: ProfileDropdownProps) {
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

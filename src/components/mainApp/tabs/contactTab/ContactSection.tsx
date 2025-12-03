@@ -6,7 +6,7 @@ import AddUserModal from "../../ui/modals/AddUserModal";
 import LanguageContext from "../../../../context/LanguageContext";
 
 export default function ContactSection() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const { languageData } = useContext(LanguageContext);
 
     return (

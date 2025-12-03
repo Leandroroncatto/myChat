@@ -1,6 +1,7 @@
+import type { MessageBubbleProps } from "../../../types/mainApp/chat/MessageBubbleProps";
 import dateFormatter from "../../../utils/dateFormatter";
 
-export default function MessageBubble({ sender, content, timestamp }: any) {
+export default function MessageBubble({ sender, content, timestamp }: MessageBubbleProps) {
     return (
         <>
             <div className={`flex w-full ${sender == "me" ? "justify-end" : "justify-start"}`}>
