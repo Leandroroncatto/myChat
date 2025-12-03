@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import ContactSection from "../../../components/mainApp/tabs/contactTab/ContactSection";
 
 export default function ContactContent() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
     const { id: activeChat } = useParams();
 
     useEffect(() => {

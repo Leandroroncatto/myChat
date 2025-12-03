@@ -4,9 +4,10 @@ import MessageContent from "./TabContent/MessageContent";
 import SettingsContent from "./TabContent/SettingsContent";
 import ContactContent from "./TabContent/ContactContent";
 import PhoneContent from "./TabContent/PhoneContent";
+import type { TabMode } from "../../types/mainApp/tabs/TabMode";
 
 export default function Panel() {
-    const [activeTab, setActiveTab] = useState("message");
+    const [activeTab, setActiveTab] = useState<TabMode>("message");
 
     const renderTabsContents = () => {
         switch (activeTab) {

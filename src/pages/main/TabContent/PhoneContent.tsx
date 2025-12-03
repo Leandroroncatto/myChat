@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import PhoneSection from "../../../components/mainApp/tabs/phoneTab/PhoneSection";
 
 export default function PhoneContent() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
     const { id: activeChat } = useParams();
 
     useEffect(() => {

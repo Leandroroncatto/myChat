@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import SettingsSection from "../../../components/mainApp/tabs/settingsTab/SettingsSection";
 
 export default function SettingsContent() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-    const { id: activeChat } = useParams();
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
+    const { id: activeChat } = useParams<string>();
 
     useEffect(() => {
         function onResize() {
