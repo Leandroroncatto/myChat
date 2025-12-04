@@ -1,10 +1,11 @@
 import { Link } from "react-router";
 // import myChatLogo from "../../assets/myChat_lightTheme_LOGO.png"
-import { Check, LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
+import { LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import type { HeaderProps } from "../../types/landingPage/HeaderProps";
 import type { LangMode } from "../../types/globals/LangMode";
+import LanguageSelector from "../ui/LanguageSelector";
 
 export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: HeaderProps) {
     const [languageSelectorOpen, setLanguageSelectorOpen] = useState<boolean>(false);
@@ -44,7 +45,7 @@ export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: 
                     <div className="flex items-center gap-2">
                         <h1
                             onClick={() => setScrollDiv("mychat")}
-                            className="cursor-pointer text-xl font-semibold text-gray-800 dark:text-slate-100">
+                            className="text-xl font-semibold text-gray-800 cursor-pointer dark:text-slate-100">
                             {" "}
                             {languageData.landingPage?.header.title}
                         </h1>
@@ -72,22 +73,11 @@ export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: 
                                 size={21}
                             />
                             {languageSelectorOpen && (
-                                <div
+                                <LanguageSelector
+                                    activeLang={activeLang}
                                     ref={languageSelectorRef}
-                                    className="absolute w-48 transition duration-75 ease-in bg-white border border-gray-200 shadow-xl xl top-8 rounded-xl dark:bg-slate-800 dark:border-slate-700">
-                                    <div onClick={() => handleLanguageChange("portugues")} className="overflow-hidden">
-                                        <div className="flex items-center justify-between px-4 py-2 cursor-pointer dark:hover:bg-slate-900 rounded-t-xl">
-                                            <p className="text-sm">Portugues (BR)</p>
-                                            {activeLang == "portugues" && <Check className="w-4 h-4 text-blue-500" />}
-                                        </div>
-                                    </div>
-                                    <div onClick={() => handleLanguageChange("english")} className="overflow-hidden">
-                                        <div className="flex items-center justify-between px-4 py-2 cursor-pointer dark:hover:bg-slate-900 rounded-b-xl">
-                                            <p className="text-sm">English (US)</p>
-                                            {activeLang == "english" && <Check className="w-4 h-4 text-blue-500" />}
-                                        </div>
-                                    </div>
-                                </div>
+                                    changeLangHandler={handleLanguageChange}
+                                />
                             )}
                         </div>
 
