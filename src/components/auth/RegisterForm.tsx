@@ -29,7 +29,7 @@ export default function RegisterForm({ languageData }: { languageData: LangData 
                         htmlFor="dname"
                         infoActive={infoActive}
                         labelText={languageData.auth?.registerPage.displayNameLabel}
-                        toolTipText={languageData.auth?.registerPage.usernameToolTip}
+                        toolTipText={languageData.auth?.registerPage.displayNameToolTip}
                         setInfoActive={setInfoActive}
                     />
                     <InputIcon
@@ -44,7 +44,7 @@ export default function RegisterForm({ languageData }: { languageData: LangData 
                     <InfoLabel
                         labelText={languageData.auth?.registerPage.usernameLabel}
                         htmlFor="username"
-                        toolTipText={languageData.auth?.registerPage.displayNameToolTip}
+                        toolTipText={languageData.auth?.registerPage.usernameToolTip}
                         activeKey="usernameInfoActive"
                         infoActive={infoActive}
                         setInfoActive={setInfoActive}
