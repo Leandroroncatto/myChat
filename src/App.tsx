@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getTheme, setTheme } from "./utils/toggleTheme";
 import LandingPage from "./pages/landingPage/LandingPage";
 import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
 
 function App() {
     useEffect(() => {
@@ -19,7 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<LandingPage />}></Route>
                     <Route path="/login" element={<LoginPage />}></Route>
-                    <Route path="/register" element={""}></Route>
+                    <Route path="/register" element={<RegisterPage />}></Route>
 
                     <Route path="/chat" element={<Panel />}></Route>
                     <Route path="/chat/:id" element={<Panel />}></Route>
