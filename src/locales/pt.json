@@ -1,151 +1,157 @@
 {
-    "landingPage": {
-        "header": {
-            "title": "myChat",
-            "navButtons": {
-                "resourcesButton": "Recursos",
-                "securityButton": "Segurança",
-                "startButton": "Começar"
-            }
-        },
-        "heroSection": {
-            "headline": "Conecte-se com quem se importa",
-            "subtitle": "Uma plataforma de mensagens moderna para manter suas conversas organizadas.",
-            "buttonText": "Começar Agora"
-        },
-        "featuresSection": {
-            "title": "Por que escolher o myChat?",
-            "feature1": {
-                "title": "Rápido e Eficiente",
-                "text": "Mensagens instantâneas com sincronização em tempo real em todos os seus dispositivos"
-            },
-            "feature2": {
-                "title": "Autenticação 2FA",
-                "text": "Proteja sua conta com autenticação de dois fatores para maior segurança"
-            },
-            "feature3": {
-                "title": "Organizado",
-                "text": "Fixe conversas importantes e mantenha tudo organizado em um só lugar"
-            }
-        },
-        "securitySection": {
-            "title": "Aviso de Segurança",
-            "points": {
-                "point1": "Apenas a sua senha está protegida de forma segura.",
-                "point2": "Outras informações da conta (como nome, e-mail) não têm garantia de segurança.",
-                "point3": "Conteúdo de Conversas/Chats: O sigilo de todo o conteúdo da conversa não é garantido.",
-                "point4": "As conversas podem se tornar acessíveis ou visíveis acidentalmente a terceiros."
-            },
-            "criticalWarning": "Aviso Crítico: Não insira nenhuma informação pessoal ou sensível nas funcionalidades de chat. Use o serviço por sua conta e risco."
-        },
-        "footer": {
-            "copyright": "Todos direitos reservados."
-        }
+  "landingPage": {
+    "header": {
+      "title": "myChat",
+      "navButtons": {
+        "resourcesButton": "Recursos",
+        "securityButton": "Segurança",
+        "startButton": "Começar"
+      }
     },
-    "auth": {
-        "loginPage": {
-            "welcomeTitle": "Bem-vindo ao myChat!",
-            "signInMessage": "Entre na sua conta",
-            "emailLabel": "E-mail",
-            "passwordLabel": "Senha",
-            "signInButton": "Entrar",
-            "noAccount": "Não tem uma conta?",
-            "signUpLink": "Cadastre-se",
-            "sidebarTitle": "Conecte-se com qualquer pessoa, em qualquer lugar.",
-            "sidebarSubtitle": "Bem-vindo ao myChat!"
-        },
-        "registerPage": {}
+    "heroSection": {
+      "headline": "Conecte-se com pessoas que importam",
+      "subtitle": "Uma plataforma de mensagens moderna para manter suas conversas organizadas.",
+      "buttonText": "Comece Agora"
     },
-    "mainApp": {
-        "chatsSection": {
-            "startOfConversation": "Esse é o começo da sua conversa",
-            "emptyChat": {
-                "title": "Selecione uma conversa para começar",
-                "buttonText": "Pesquisar contatos"
-            }
-        },
-        "messageSection": {
-            "title": "Mensagens",
-            "inputPlaceholder": "Pesquisar conversas",
-            "archivedButton": "Arquivadas",
-            "pinnedTitle": "Conversas Fixadas",
-            "allChatsTitle": "Todas as Conversas"
-        },
-        "contactsSection": {
-            "title": "Contatos",
-            "inputPlaceholder": "Buscar contatos",
-            "newContactButton": "Novo Contato",
-            "myContactsTitle": "Meus Contatos"
-        },
-        "phoneSection": {
-            "warningTitle": "Em Desenvolvimento",
-            "warningMessage": "Esta funcionalidade está sendo desenvolvida no momento. Volte em breve para conferir as novidades!"
-        },
-        "settingsSection": {
-            "mainTab": {
-                "title": "Configurações",
-                "appearanceButton": "Aparência",
-                "profileButton": "Perfil",
-                "languagesButton": "Idioma",
-                "accountButton": "Conta",
-                "privacyAndSecurityButton": "Privacidade e Segurança"
-            },
-            "appearanceSubTab": {
-                "title": "Aparência",
-                "darkModeButton": "Modo Escuro"
-            },
-            "profileSubTab": {
-                "title": "Perfil",
-                "nameLabel": "Nome",
-                "textBox": "Seu nome será exibido para seus contatos.",
-                "aboutLabel": "Sobre",
-                "buttonText": "Salvar"
-            },
-            "languagesSubTab": {
-                "title": "Idioma"
-            },
-            "accountSubTab": {
-                "title": "Conta",
-                "userIdentitySection": {
-                    "sectionTitle": "Identidade do Usuário",
-                    "usernameLabel": "Nome de Usuário (ID Único)",
-                    "usernameInputPlaceholder": "Nome de Usuário",
-                    "emailLabel": "Endereço de E-mail",
-                    "emailInputPlaceholder": "E-mail",
-                    "saveIdentityChangesButton": "Salvar Alterações de Identidade"
-                },
-                "changePasswordSection": {
-                    "sectionTitle": "Alterar Senha",
-                    "currentPasswordLabel": "Senha Atual",
-                    "newPasswordLabel": "Nova Senha",
-                    "confirmPasswordLabel": "Confirmar Nova Senha",
-                    "updatePasswordButton": "Atualizar Senha"
-                },
-                "logOutButton": "Sair da Conta"
-            },
-            "privacyAndSecuritySubTab": {
-                "title": "Privacidade e Segurança",
-                "twoFactorAuthTitle": "Autenticação de Dois Fatores (2FA)",
-                "statusText": "Status",
-                "buttonText": "Ativar 2FA",
-                "noteText": "Com a 2FA ativa, um código de segurança será enviado ao seu e-mail a cada novo login.",
-                "importantNoteTitle": "Observação Importante",
-                "importantNote": "Este aplicativo é um projeto de estudo e desenvolvimento sem fins lucrativos. Ele foi criado exclusivamente para fins de aprendizado e demonstração de habilidades técnicas.",
-                "securityDisclaimerTitle": "Aviso de Segurança",
-                "securityDisclaimerText": "Apenas os dados de senha são protegidos de forma segura. Outras informações da conta e todo o conteúdo das conversas não têm garantia de segurança. As conversas podem se tornar visíveis ou acessíveis de maneiras não intencionais. Use o serviço e seus recursos de conversação por sua conta e risco, e **não insira informações pessoais ou sensíveis**."
-            }
-        },
-        "modals": {
-            "addUserModal": {
-                "title": "Novo Contato",
-                "description": "Pesquise pelo nome de usuário para adicionar um novo contato.",
-                "emptyList": "Use a busca acima para encontrar usuários."
-            },
-            "twoFactorAuthModal": {
-                "title": "Ativar Autenticação de 2 Fatores (2FA)",
-                "description": "Insira o código de 6 dígitos enviado para o seu e-mail cadastrado.",
-                "buttonText": "Ativar Autenticação de 2 Fatores"
-            }
-        }
+    "featuresSection": {
+      "title": "Por que escolher myChat?",
+      "feature1": {
+        "title": "Rápido e Eficiente",
+        "text": "Mensagens instantâneas com sincronização em tempo real em todos os seus dispositivos"
+      },
+      "feature2": {
+        "title": "Autenticação 2FA",
+        "text": "Proteja sua conta com autenticação de dois fatores para maior segurança"
+      },
+      "feature3": {
+        "title": "Organizado",
+        "text": "Fixe conversas importantes e mantenha tudo organizado em um só lugar"
+      }
+    },
+    "securitySection": {
+      "title": "Aviso de Segurança",
+      "points": {
+        "point1": "Apenas sua senha é protegida de forma segura.",
+        "point2": "Outras informações da conta (como nome, email) não têm segurança garantida.",
+        "point3": "Conteúdo de Chat/Conversa: O sigilo de todo o conteúdo das conversas não é garantido.",
+        "point4": "Conversas podem, acidentalmente, tornar-se acessíveis ou visíveis a terceiros."
+      },
+      "criticalWarning": "Aviso Crítico: Não insira nenhuma informação pessoal ou sensível nas funcionalidades de chat. Use o serviço por sua conta e risco."
+    },
+    "footer": {
+      "copyright": "Todos os direitos reservados."
     }
+  },
+  "auth": {
+    "loginPage": {
+      "welcomeTitle": "Bem-vindo ao myChat!",
+      "signInMessage": "Entre na sua conta",
+      "emailLabel": "Email",
+      "passwordLabel": "Senha",
+      "signInButton": "Entrar",
+      "noAccount": "Não tem uma conta?",
+      "signUpLink": "Cadastre-se",
+      "sidebarTitle": "Conecte-se com qualquer pessoa, em qualquer lugar.",
+      "sidebarSubtitle": "Bem-vindo ao myChat!"
+    },
+    "registerPage": {
+      "welcomeTitle": "Criar Conta",
+      "registerMessage": "Insira suas informações para se registrar.",
+      "registerButton": "Registrar",
+      "hasAccount": "Já tem uma conta?",
+      "hasAccountLink": "Fazer Login"
+    }
+  },
+  "mainApp": {
+    "chatsSection": {
+      "startOfConversation": "Este é o início da sua conversa",
+      "emptyChat": {
+        "title": "Selecione uma conversa para começar",
+        "buttonText": "Buscar contatos"
+      }
+    },
+    "messageSection": {
+      "title": "Mensagens",
+      "inputPlaceholder": "Buscar conversas",
+      "archivedButton": "Arquivados",
+      "pinnedTitle": "Conversas Fixadas",
+      "allChatsTitle": "Todas as Conversas"
+    },
+    "contactsSection": {
+      "title": "Contatos",
+      "inputPlaceholder": "Buscar contatos",
+      "newContactButton": "Novo Contato",
+      "myContactsTitle": "Meus Contatos"
+    },
+    "phoneSection": {
+      "warningTitle": "Em Desenvolvimento",
+      "warningMessage": "Este recurso está atualmente em desenvolvimento. Volte em breve para conferir as atualizações!"
+    },
+    "settingsSection": {
+      "mainTab": {
+        "title": "Configurações",
+        "appearanceButton": "Aparência",
+        "profileButton": "Perfil",
+        "languagesButton": "Idioma",
+        "accountButton": "Conta",
+        "privacyAndSecurityButton": "Privacidade e Segurança"
+      },
+      "appearanceSubTab": {
+        "title": "Aparência",
+        "darkModeButton": "Modo Escuro"
+      },
+      "profileSubTab": {
+        "title": "Perfil",
+        "nameLabel": "Nome",
+        "textBox": "Seu nome será exibido para seus contatos.",
+        "aboutLabel": "Sobre",
+        "buttonText": "Salvar"
+      },
+      "languagesSubTab": {
+        "title": "Idioma"
+      },
+      "accountSubTab": {
+        "title": "Conta",
+        "userIdentitySection": {
+          "sectionTitle": "Identidade do Usuário",
+          "usernameLabel": "Nome de Usuário (ID Único)",
+          "usernameInputPlaceholder": "Nome de Usuário",
+          "emailLabel": "Endereço de Email",
+          "emailInputPlaceholder": "Email",
+          "saveIdentityChangesButton": "Salvar Alterações de Identidade"
+        },
+        "changePasswordSection": {
+          "sectionTitle": "Mudar Senha",
+          "currentPasswordLabel": "Senha Atual",
+          "newPasswordLabel": "Nova Senha",
+          "confirmPasswordLabel": "Confirmar Nova Senha",
+          "updatePasswordButton": "Atualizar Senha"
+        },
+        "logOutButton": "Sair"
+      },
+      "privacyAndSecuritySubTab": {
+        "title": "Privacidade e Segurança",
+        "twoFactorAuthTitle": "Autenticação de Dois Fatores (2FA)",
+        "statusText": "Status",
+        "buttonText": "Ativar 2FA",
+        "noteText": "Com o 2FA ativo, um código de segurança será enviado para o seu email a cada novo login.",
+        "importantNoteTitle": "Nota Importante",
+        "importantNote": "Este aplicativo é um projeto de estudo e desenvolvimento sem fins lucrativos. Foi criado exclusivamente para fins de aprendizado e demonstração de habilidades técnicas.",
+        "securityDisclaimerTitle": "Aviso de Segurança",
+        "securityDisclaimerText": "Apenas os dados de senha são protegidos de forma segura. Outras informações da conta e todo o conteúdo de conversas não têm segurança garantida. As conversas podem se tornar visíveis ou acessíveis de forma não intencional. Use o serviço e seus recursos de chat por sua conta e risco, e **não insira informações pessoais ou sensíveis**."
+      }
+    },
+    "modals": {
+      "addUserModal": {
+        "title": "Novo Contato",
+        "description": "Busque pelo nome de usuário para adicionar um novo contato.",
+        "emptyList": "Use a barra de pesquisa acima para encontrar usuários."
+      },
+      "twoFactorAuthModal": {
+        "title": "Ativar Autenticação de Dois Fatores (2FA)",
+        "description": "Insira o código de 6 dígitos enviado para o seu email cadastrado.",
+        "buttonText": "Ativar Autenticação de Dois Fatores"
+      }
+    }
+  }
 }
