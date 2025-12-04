@@ -1,11 +1,11 @@
-import testProfilePicture from "../../../assets/testProfilePicture.jpg";
+import testProfilePicture from "../../assets/testProfilePicture.jpg";
 import { MessageCircleIcon, PhoneIcon, Settings, UsersIcon } from "lucide-react";
 import { useState } from "react";
-import myChatLightThemeLogo from "../../../assets/myChat_lightTheme_LOGO.png";
-import myChatDarkThemeLogo from "../../../assets/myChat_darkTheme_LOGO.png";
+import myChatLightThemeLogo from "../../assets/myChat_lightTheme_LOGO.png";
+import myChatDarkThemeLogo from "../../assets/myChat_darkTheme_LOGO.png";
 import { useNavigate } from "react-router";
-import type { ActiveTabTypes, NavigationBarProps } from "../../../types/mainApp/ui/NavigationBarTypes";
-import type { TabMode } from "../../../types/mainApp/tabs/TabMode";
+import type { TabMode } from "../../types/mainApp/tabs/TabMode";
+import type { ActiveTabTypes, NavigationBarProps } from "../../types/ui/NavigationBarTypes";
 
 export default function NavigationBar({ activateTab }: NavigationBarProps) {
     const [activeTab, setActiveTab] = useState<ActiveTabTypes>({
