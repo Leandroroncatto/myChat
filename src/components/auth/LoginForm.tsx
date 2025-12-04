@@ -16,7 +16,7 @@ export default function LoginForm({ languageData }: { languageData: LangData }) 
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col w-full gap-4">
                 <div className="relative flex flex-col gap-1">
                     <label htmlFor="email" className="text-sm text-gray-800 dark:text-gray-200">
-                        Email or Username
+                        {languageData.auth?.loginPage.emailLabel}
                     </label>
                     <input
                         type="email"
@@ -28,7 +28,7 @@ export default function LoginForm({ languageData }: { languageData: LangData }) 
                 </div>
                 <div className="relative flex flex-col gap-1">
                     <label htmlFor="password" className="text-sm text-gray-800 dark:text-gray-200">
-                        Password
+                        {languageData.auth?.loginPage.passwordLabel}
                     </label>
                     <input
                         type="password"
