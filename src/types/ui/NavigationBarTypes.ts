@@ -1,5 +1,5 @@
 import type { Dispatch } from "react";
-import type { TabMode } from "../tabs/TabMode";
+import type { TabMode } from "../mainApp/tabs/TabMode";
 
 export interface NavigationBarProps {
     activateTab: Dispatch<React.SetStateAction<TabMode>>;
