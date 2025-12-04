@@ -52,7 +52,8 @@
             "noAccount": "Don't have an account?",
             "signUpLink": "Sign Up",
             "sidebarTitle": "Connect with anyone, anywhere.",
-            "sidebarSubtitle": "Welcome to myChat!"
+            "sidebarSubtitle": "Welcome to myChat!",
+            "forgotPassword": "Forgot password?"
         },
         "registerPage": {
             "welcomeTitle": "Create Account",
