@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import type { LanguageSelectorProps } from "../../types/ui/LanguageSelectorTypes";
 
-export default function LanguageSelector({ ref, changeLangHandler, activeLang }: LanguageSelectorProps) {
+export default function LanguageSelectorMenu({ ref, changeLangHandler, activeLang }: LanguageSelectorProps) {
     return (
         <>
             <div
