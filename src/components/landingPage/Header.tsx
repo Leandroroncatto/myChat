@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 // import myChatLogo from "../../assets/myChat_lightTheme_LOGO.png"
-import { LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import type { HeaderProps } from "../../types/landingPage/HeaderProps";
 import type { LangMode } from "../../types/globals/LangMode";
-import LanguageSelector from "../ui/LanguageSelector";
+import LanguageButton from "../ui/LanguageButton";
+import ThemeButtons from "../ui/ThemeButtons";
 
 export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: HeaderProps) {
     const [languageSelectorOpen, setLanguageSelectorOpen] = useState<boolean>(false);
@@ -46,7 +46,6 @@ export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: 
                         <h1
                             onClick={() => setScrollDiv("mychat")}
                             className="text-xl font-semibold text-gray-800 cursor-pointer dark:text-slate-100">
-                            {" "}
                             {languageData.landingPage?.header.title}
                         </h1>
                     </div>
@@ -63,35 +62,13 @@ export default function Header({ setCurrentTheme, currentTheme, setScrollDiv }: 
                                 {languageData.landingPage?.header.navButtons.securityButton}
                             </button>
                         </div>
-                        <div className="relative">
-                            <LanguagesIcon
-                                ref={languageIconRef}
-                                onClick={() => setLanguageSelectorOpen(!languageSelectorOpen)}
-                                className={`${
-                                    languageSelectorOpen ? "text-blue-500" : "text-gray-600 dark:text-slate-100"
-                                } cursor-pointer hover:text-blue-500`}
-                                size={21}
-                            />
-                            {languageSelectorOpen && (
-                                <LanguageSelector
-                                    activeLang={activeLang}
-                                    ref={languageSelectorRef}
-                                    changeLangHandler={handleLanguageChange}
-                                />
-                            )}
-                        </div>
-
-                        {currentTheme == "dark" ? (
-                            <SunIcon
-                                onClick={() => setCurrentTheme("light")}
-                                className="text-gray-600 cursor-pointer dark:text-slate-100 hover:text-blue-500"
-                            />
-                        ) : (
-                            <MoonIcon
-                                onClick={() => setCurrentTheme("dark")}
-                                className="text-gray-600 cursor-pointer dark:text-slate-100 hover:text-blue-500"
-                            />
-                        )}
+                        <LanguageButton
+                            handleLanguageChange={handleLanguageChange}
+                            languageIcons={{ languageIconRef, languageSelectorRef }}
+                            languageStates={{ activeLang, languageSelectorOpen, setLanguageSelectorOpen }}
+                        />
+                        <ThemeButtons currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
+                        
                         <Link
                             to={"/login"}
                             className="py-1.5 px-4 text-white bg-blue-500 hover:bg-blue-600 cursor-pointer font-semibold rounded-md shadow-md">
