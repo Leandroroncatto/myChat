@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import type { LangData } from "../../types/globals/LangData";
+import { LockIcon, UserIcon } from "lucide-react";
 
 export default function LoginForm({ languageData }: { languageData: LangData }) {
     return (
@@ -13,18 +14,19 @@ export default function LoginForm({ languageData }: { languageData: LangData }) 
                 </h2>
             </div>
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col w-full gap-4">
-                <div className="flex flex-col">
+                <div className="relative flex flex-col gap-1">
                     <label htmlFor="email" className="text-sm text-gray-800 dark:text-gray-200">
-                        Email
+                        Email or Username
                     </label>
                     <input
                         type="email"
                         id="email"
                         name="email"
-                        className="p-3 text-gray-900 placeholder-gray-400 transition duration-150 bg-white border border-gray-300 rounded-lg shadow-sm dark:border-gray-600 dark:bg-slate-800 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="p-3 pl-10 text-gray-900 placeholder-gray-400 transition duration-150 bg-white border border-gray-300 rounded-lg shadow-sm dark:border-gray-600 dark:bg-slate-800 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
+                    <UserIcon className="absolute w-4 h-4 text-blue-500 top-10.5 left-4" />
                 </div>
-                <div className="flex flex-col">
+                <div className="relative flex flex-col gap-1">
                     <label htmlFor="password" className="text-sm text-gray-800 dark:text-gray-200">
                         Password
                     </label>
@@ -32,8 +34,9 @@ export default function LoginForm({ languageData }: { languageData: LangData }) 
                         type="password"
                         id="password"
                         name="password"
-                        className="p-3 text-gray-900 placeholder-gray-400 transition duration-150 bg-white border border-gray-300 rounded-lg shadow-sm dark:border-gray-600 dark:bg-slate-800 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="p-3 pl-10 text-gray-900 placeholder-gray-400 transition duration-150 bg-white border border-gray-300 rounded-lg shadow-sm dark:border-gray-600 dark:bg-slate-800 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
+                    <LockIcon className="absolute w-4 h-4 text-blue-500 top-10.5 left-4" />
                 </div>
                 <button className="p-4 font-semibold text-white bg-blue-500 cursor-pointer rounded-2xl hover:bg-blue-600">
                     {languageData.auth?.loginPage.signInButton}
