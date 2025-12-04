@@ -42,7 +42,20 @@
             "copyright": "Todos direitos reservados."
         }
     },
-    "auth": {},
+    "auth": {
+        "loginPage": {
+            "welcomeTitle": "Bem-vindo ao myChat!",
+            "signInMessage": "Entre na sua conta",
+            "emailLabel": "E-mail",
+            "passwordLabel": "Senha",
+            "signInButton": "Entrar",
+            "noAccount": "Não tem uma conta?",
+            "signUpLink": "Cadastre-se",
+            "sidebarTitle": "Conecte-se com qualquer pessoa, em qualquer lugar.",
+            "sidebarSubtitle": "Bem-vindo ao myChat!"
+        },
+        "registerPage": {}
+    },
     "mainApp": {
         "chatsSection": {
             "startOfConversation": "Esse é o começo da sua conversa",

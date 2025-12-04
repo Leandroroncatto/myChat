@@ -3,25 +3,25 @@
         "header": {
             "title": "myChat",
             "navButtons": {
-                "resourcesButton": "Features",
+                "resourcesButton": "Resources",
                 "securityButton": "Security",
                 "startButton": "Get Started"
             }
         },
         "heroSection": {
-            "headline": "Connect with those who matter",
+            "headline": "Connect with people who matter",
             "subtitle": "A modern messaging platform to keep your conversations organized.",
             "buttonText": "Get Started Now"
         },
         "featuresSection": {
-            "title": "Why Choose myChat?",
+            "title": "Why choose myChat?",
             "feature1": {
                 "title": "Fast and Efficient",
                 "text": "Instant messaging with real-time synchronization across all your devices"
             },
             "feature2": {
                 "title": "2FA Authentication",
-                "text": "Protect your account with two-factor authentication for increased security"
+                "text": "Secure your account with two-factor authentication for added safety"
             },
             "feature3": {
                 "title": "Organized",
@@ -29,20 +29,33 @@
             }
         },
         "securitySection": {
-            "title": "Security Disclaimer",
+            "title": "Security Warning",
             "points": {
                 "point1": "Only your password is securely protected.",
-                "point2": "Other account information (such as name, email) is not guaranteed to be secure.",
-                "point3": "Conversation/Chat Content: The confidentiality of all conversation content is not guaranteed.",
-                "point4": "Conversations may become accidentally accessible or visible to third parties."
+                "point2": "Other account information (like name, email) is not guaranteed to be secure.",
+                "point3": "Chat/Conversation Content: The secrecy of all conversation content is not guaranteed.",
+                "point4": "Conversations may accidentally become accessible or visible to third parties."
             },
-            "criticalWarning": "Critical Warning: Do not enter any personal or sensitive information in the chat features. Use the service at your own risk."
+            "criticalWarning": "Critical Warning: Do not input any personal or sensitive information into the chat functionalities. Use the service at your own risk."
         },
         "footer": {
             "copyright": "All rights reserved."
         }
     },
-    "auth": {},
+    "auth": {
+        "loginPage": {
+            "welcomeTitle": "Welcome to myChat!",
+            "signInMessage": "Sign in to your account",
+            "emailLabel": "Email",
+            "passwordLabel": "Password",
+            "signInButton": "Sign In",
+            "noAccount": "Don't have an account?",
+            "signUpLink": "Sign Up",
+            "sidebarTitle": "Connect with anyone, anywhere.",
+            "sidebarSubtitle": "Welcome to myChat!"
+        },
+        "registerPage": {}
+    },
     "mainApp": {
         "chatsSection": {
             "startOfConversation": "This is the start of your conversation",
@@ -66,7 +79,7 @@
         },
         "phoneSection": {
             "warningTitle": "Under Development",
-            "warningMessage": "This feature is currently being developed. Come back soon to check for updates!"
+            "warningMessage": "This feature is currently being developed. Check back soon for updates!"
         },
         "settingsSection": {
             "mainTab": {
@@ -84,7 +97,7 @@
             "profileSubTab": {
                 "title": "Profile",
                 "nameLabel": "Name",
-                "textBox": "Your name will be visible to your contacts.",
+                "textBox": "Your name will be displayed to your contacts.",
                 "aboutLabel": "About",
                 "buttonText": "Save"
             },
@@ -115,18 +128,18 @@
                 "twoFactorAuthTitle": "Two-Factor Authentication (2FA)",
                 "statusText": "Status",
                 "buttonText": "Activate 2FA",
-                "noteText": "With 2FA active, a security code will be sent to your email on every new login.",
+                "noteText": "With 2FA active, a security code will be sent to your email upon every new login.",
                 "importantNoteTitle": "Important Note",
-                "importantNote": "This application is a non-profit study and development project. It was created exclusively for learning purposes and demonstration of technical skills.",
+                "importantNote": "This application is a non-profit study and development project. It was created exclusively for learning purposes and technical skill demonstration.",
                 "securityDisclaimerTitle": "Security Warning",
-                "securityDisclaimerText": "Only password data is securely protected. Other account information and all conversation content are not guaranteed to be secure. Conversations may become unintentionally visible or accessible. Use the service and its conversation features at your own risk, and **do not enter personal or sensitive information**."
+                "securityDisclaimerText": "Only password data is securely protected. Other account information and all conversation content are not guaranteed to be secure. Conversations may become unintentionally visible or accessible. Use the service and its chat features at your own risk, and **do not enter personal or sensitive information**."
             }
         },
         "modals": {
             "addUserModal": {
                 "title": "New Contact",
                 "description": "Search by username to add a new contact.",
-                "emptyList": "Use the search above to find users."
+                "emptyList": "Use the search bar above to find users."
             },
             "twoFactorAuthModal": {
                 "title": "Activate Two-Factor Authentication (2FA)",
